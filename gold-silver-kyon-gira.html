@@ -1,0 +1,1460 @@
+<title>Gold/Silver Kyon Gira</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Research brief on why gold and silver fell from the January 2026 records to the November 2026 lows, what it means for Indian investors, and what to say on camera.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: an assay-style research dossier. Sticky section index on the left (desktop), one reading column,
+   wide tables scroll inside their own frame. Gold and silver are the only two data hues; gains and losses get their own pair. */
+:root {
+  --paper: #f3f5f7;
+  --surface: #ffffff;
+  --surface-2: #e9edf2;
+  --ink: #141920;
+  --ink-2: #455062;
+  --ink-3: #657083;
+  --rule: #d5dbe3;
+  --rule-strong: #b8c1cd;
+  --gold: #a86f0a;
+  --gold-ink: #7a5106;
+  --gold-wash: #f5ead3;
+  --silver: #3f6fa8;
+  --silver-ink: #2c5384;
+  --silver-wash: #e2eaf4;
+  --gain: #128a6c;
+  --gain-ink: #0b6650;
+  --loss: #c0392b;
+  --loss-ink: #a22f20;
+  --flag: #8a5d00;
+  --flag-wash: #faefd2;
+  --focus: #3f6fa8;
+  --font-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --step--1: 0.8125rem;
+  --step-0: 1rem;
+  --step-1: 1.1875rem;
+  --step-2: 1.5rem;
+  --step-3: clamp(1.75rem, 1.2rem + 1.8vw, 2.25rem);
+  --step-4: clamp(2.4rem, 1.4rem + 4vw, 4rem);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0d1116; --surface: #151b23; --surface-2: #1c242e; --ink: #e8ecf1; --ink-2: #b2bbc7; --ink-3: #8a95a3;
+    --rule: #29323d; --rule-strong: #3a4552;
+    --gold: #bf861a; --gold-ink: #e2b65e; --gold-wash: #2a2213;
+    --silver: #5a8acb; --silver-ink: #9dbbe6; --silver-wash: #172131;
+    --gain: #1e9a7c; --gain-ink: #5cc9a7; --loss: #d9574a; --loss-ink: #f08b7c;
+    --flag: #e0b04a; --flag-wash: #2b2310; --focus: #9dbbe6;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0d1116; --surface: #151b23; --surface-2: #1c242e; --ink: #e8ecf1; --ink-2: #b2bbc7; --ink-3: #8a95a3;
+  --rule: #29323d; --rule-strong: #3a4552;
+  --gold: #bf861a; --gold-ink: #e2b65e; --gold-wash: #2a2213;
+  --silver: #5a8acb; --silver-ink: #9dbbe6; --silver-wash: #172131;
+  --gain: #1e9a7c; --gain-ink: #5cc9a7; --loss: #d9574a; --loss-ink: #f08b7c;
+  --flag: #e0b04a; --flag-wash: #2b2310; --focus: #9dbbe6;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration-color: var(--rule-strong); text-underline-offset: 3px; }
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+strong { font-weight: 600; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.num, td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 4rem;
+}
+
+/* ---------- masthead ---------- */
+.mast { padding-block: 2.5rem 2rem; border-bottom: 1px solid var(--rule); display: grid; gap: 1.25rem; }
+.eyebrow {
+  display: flex; flex-wrap: wrap; gap: 0.25rem 1rem;
+  font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
+}
+.eyebrow b { color: var(--gold-ink); font-weight: 600; }
+.mast h1 {
+  font-size: var(--step-4); font-weight: 800; font-stretch: 118%; line-height: 0.98; letter-spacing: -0.01em;
+}
+.mast h1 .slash { color: var(--gold-ink); font-weight: 600; }
+.dek { font-size: var(--step-1); color: var(--ink-2); max-width: 46rem; line-height: 1.5; }
+.dek strong { color: var(--ink); }
+
+.hallmark { display: flex; flex-wrap: wrap; border: 1.5px solid var(--ink); border-radius: 3px; width: fit-content; max-width: 100%; }
+.hallmark > div { padding: 0.45rem 0.85rem; border-right: 1.5px solid var(--ink); min-width: 0; }
+.hallmark > div:last-child { border-right: 0; }
+.hallmark dt { font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); }
+.hallmark dd { margin: 0; font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 600; }
+@media (max-width: 560px) {
+  .hallmark { width: 100%; }
+  .hallmark > div { flex: 1 1 45%; border-bottom: 1.5px solid var(--ink); }
+  .hallmark > div:nth-last-child(-n+1) { border-bottom: 0; }
+}
+
+/* ---------- headline figures ---------- */
+.figures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: 1px solid var(--rule); }
+.fig { padding: 1.25rem 1.25rem 1.25rem 0; display: grid; gap: 0.2rem; align-content: start; }
+.fig + .fig { padding-left: 1.25rem; border-left: 1px solid var(--rule); }
+.fig .k { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); display: flex; align-items: center; gap: 0.45rem; }
+.fig .v { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; font-size: clamp(2rem, 1.4rem + 2vw, 2.75rem); line-height: 1.05; color: var(--loss-ink); font-variant-numeric: tabular-nums; }
+.fig .v.soft { color: var(--ink); }
+.fig .d { font-size: 0.875rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; flex: none; }
+.swatch.gold { background: var(--gold); }
+.swatch.silver { background: var(--silver); }
+@media (max-width: 900px) {
+  .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fig:nth-child(3) { padding-left: 0; border-left: 0; }
+  .fig:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 420px) {
+  .figures { grid-template-columns: minmax(0, 1fr); }
+  .fig, .fig + .fig { padding-left: 0; border-left: 0; }
+  .fig + .fig { border-top: 1px solid var(--rule); }
+}
+
+/* ---------- page grid ---------- */
+.layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; padding-top: 2rem; }
+.toc { font-size: 0.875rem; }
+.toc-title { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.5rem; }
+.toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.toc a { display: flex; gap: 0.5rem; text-decoration: none; padding: 0.3rem 0.6rem; border: 1px solid var(--rule); border-radius: 3px; background: var(--surface); color: var(--ink-2); }
+.toc a .n { font-family: var(--font-mono); color: var(--ink-3); font-size: 0.75rem; padding-top: 0.1rem; }
+.toc a:hover, .toc a.on { color: var(--ink); border-color: var(--rule-strong); }
+.toc a.on .n { color: var(--gold-ink); }
+@media (min-width: 1040px) {
+  .layout { grid-template-columns: 210px minmax(0, 1fr); gap: 3.5rem; }
+  .toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 1.5rem); align-self: start; }
+  .toc ol { display: grid; gap: 0; }
+  .toc a { border: 0; background: none; border-left: 2px solid var(--rule); border-radius: 0; padding: 0.35rem 0 0.35rem 0.75rem; }
+  .toc a.on { border-left-color: var(--gold); }
+}
+main { min-width: 0; max-width: 50rem; display: grid; gap: 4rem; }
+
+/* ---------- sections ---------- */
+section { display: grid; gap: 1.25rem; scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 1rem); min-width: 0; }
+.sec-head { display: grid; gap: 0.35rem; padding-top: 1rem; border-top: 2px solid var(--ink); }
+.sec-num { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; color: var(--ink-3); text-transform: uppercase; }
+section h2 { font-size: var(--step-3); font-weight: 750; font-stretch: 108%; line-height: 1.12; }
+section h3 { font-size: var(--step-1); font-weight: 700; font-stretch: 104%; line-height: 1.3; }
+.lede { font-size: 1.0625rem; color: var(--ink-2); max-width: 42rem; }
+.lede strong { color: var(--ink); }
+.prose { display: grid; gap: 0.9rem; max-width: 42rem; }
+.prose p { color: var(--ink); }
+.small { font-size: 0.875rem; color: var(--ink-2); }
+.muted { color: var(--ink-3); }
+
+/* source + flag chips */
+.src { font-family: var(--font-mono); font-size: 0.72em; color: var(--ink-3); white-space: nowrap; text-decoration: none; border-bottom: 1px dotted var(--rule-strong); }
+.src:hover { color: var(--ink); border-bottom-color: currentColor; }
+.flag { font-family: var(--font-mono); font-size: 0.68em; letter-spacing: 0.03em; padding: 0.05em 0.4em; border-radius: 2px; white-space: nowrap; vertical-align: 0.1em; }
+.flag.one, .flag.cf { color: var(--flag); background: var(--flag-wash); }
+.flag.vw { color: var(--silver-ink); background: var(--silver-wash); }
+.flag.calc { color: var(--ink-2); background: var(--surface-2); }
+
+/* bullet list */
+.facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.85rem; max-width: 44rem; }
+.facts li { padding-left: 1.1rem; position: relative; }
+.facts li::before { content: ""; position: absolute; left: 0; top: 0.68em; width: 6px; height: 6px; background: var(--gold); border-radius: 1px; }
+
+/* panels */
+.panel { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 1.25rem; display: grid; gap: 0.75rem; min-width: 0; }
+.panel-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+.say { background: var(--gold-wash); border-radius: 4px; padding: 1rem 1.25rem; display: grid; gap: 0.35rem; }
+.say .panel-label { color: var(--gold-ink); }
+.say p { font-size: 1.0625rem; line-height: 1.55; }
+.row { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.btn {
+  font: 600 0.875rem var(--font-body); padding: 0.55rem 0.9rem; border-radius: 3px; cursor: pointer;
+  background: var(--ink); color: var(--paper); border: 1px solid var(--ink);
+}
+.btn:hover { opacity: 0.9; }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
+.status { font-size: 0.875rem; color: var(--gain-ink); min-height: 1.2em; }
+#wa-text { width: 100%; min-height: 9rem; font: 0.8125rem/1.5 var(--font-mono); padding: 0.75rem; border: 1px solid var(--rule); border-radius: 3px; background: var(--paper); color: var(--ink); resize: vertical; }
+
+/* tables */
+.table-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 4px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.875rem; line-height: 1.45; }
+th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tbody tr:last-child td { border-bottom: 0; }
+th { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); background: var(--surface-2); white-space: nowrap; }
+td.neg { color: var(--loss-ink); font-weight: 600; }
+td.pos { color: var(--gain-ink); font-weight: 600; }
+.t-wide { min-width: 720px; }
+.t-mid { min-width: 560px; }
+caption { caption-side: bottom; text-align: left; padding: 0.6rem 0.75rem; font-size: 0.78rem; color: var(--ink-3); border-top: 1px solid var(--rule); }
+
+/* charts */
+figure { margin: 0; display: grid; gap: 0.75rem; min-width: 0; }
+.chart-frame { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 1rem 0.75rem 0.5rem; overflow-x: auto; }
+.chart { display: block; width: 100%; min-width: 600px; height: auto; font-family: var(--font-mono); }
+.chart .grid { stroke: var(--rule); stroke-width: 1; }
+.chart .grid.base { stroke: var(--rule-strong); }
+.chart .tick { stroke: var(--rule-strong); }
+.chart .ax { fill: var(--ink-3); font-size: 11px; }
+.chart .ax-year { fill: var(--ink-2); font-weight: 600; }
+.chart .ax-event { fill: var(--ink-2); }
+.chart .ax-strong { fill: var(--ink); font-weight: 600; font-size: 12px; }
+.chart .ax-band { fill: var(--ink-3); }
+.chart .halo { paint-order: stroke; stroke: var(--surface); stroke-width: 5px; stroke-linejoin: round; }
+.chart .band { fill: var(--surface-2); }
+.chart .event { stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 3 4; }
+.chart .ref { stroke: var(--rule-strong); stroke-width: 1; stroke-dasharray: 2 3; }
+.chart .bracket { fill: none; stroke: var(--ink-2); stroke-width: 1.5; }
+.chart .drop { fill: var(--loss-ink); font-family: var(--font-display); font-weight: 800; font-size: 20px; }
+.chart .series { fill: none; stroke: var(--gold); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.chart .pt { fill: var(--gold); stroke: var(--surface); stroke-width: 2; }
+.chart .pt.calc { fill: var(--surface); stroke: var(--gold); stroke-width: 2; }
+.chart .hit { fill: transparent; cursor: pointer; }
+.chart .hit:hover, .chart .hit:focus-visible { fill: var(--gold); fill-opacity: 0.14; outline: none; }
+figcaption { font-size: 0.8125rem; color: var(--ink-3); max-width: 44rem; }
+.legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; font-size: 0.8125rem; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.key-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--gold); display: inline-block; }
+.key-dot.hollow { background: var(--surface); border: 2px solid var(--gold); }
+.key-line { width: 18px; border-top: 1.5px dashed var(--ink-3); display: inline-block; }
+.key-band { width: 14px; height: 10px; background: var(--surface-2); border: 1px solid var(--rule); display: inline-block; }
+details.data { font-size: 0.875rem; }
+details.data summary { cursor: pointer; color: var(--ink-2); font-weight: 500; }
+details.data[open] summary { margin-bottom: 0.6rem; }
+
+/* horizontal bars (drawdown, history) */
+.bars { display: grid; gap: 0.55rem; }
+.bar-group { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); padding-top: 0.4rem; display: flex; align-items: center; gap: 0.45rem; }
+.bar-row { display: grid; grid-template-columns: minmax(7.5rem, 11rem) minmax(0, 1fr) 4.2rem; gap: 0.75rem; align-items: center; font-size: 0.875rem; }
+.bar-row .lbl { color: var(--ink-2); line-height: 1.3; }
+.bar-row .val { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink); }
+.track { position: relative; height: 14px; background-image: linear-gradient(to right, var(--rule) 1px, transparent 1px); background-size: 28.571% 100%; background-repeat: repeat-x; }
+.track .fill { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 0 4px 4px 0; }
+.fill.gold { background: var(--gold); }
+.fill.silver { background: var(--silver); }
+.scale { display: grid; grid-template-columns: minmax(7.5rem, 11rem) minmax(0, 1fr) 4.2rem; gap: 0.75rem; font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-3); }
+.scale .ticks { position: relative; height: 1rem; }
+.scale .ticks span { position: absolute; transform: translateX(-50%); }
+.scale .ticks span:first-child { transform: none; }
+
+@media (max-width: 600px) {
+  .bar-row, .div-row, .ratio-row { grid-template-columns: minmax(0, 1fr) 4.2rem; gap: 0.3rem 0.75rem; }
+  .bar-row .lbl, .div-row .lbl, .ratio-row .lbl { grid-column: 1 / -1; }
+  .scale, .scale[style] { grid-template-columns: minmax(0, 1fr) 4.2rem !important; }
+  .scale > span:first-child { display: none; }
+  .bars { gap: 0.7rem; }
+}
+
+/* diverging bars (where each buyer stands) */
+.div-row { display: grid; grid-template-columns: minmax(8rem, 12rem) minmax(0, 1fr) 4.4rem; gap: 0.75rem; align-items: center; font-size: 0.875rem; }
+.div-row .lbl { color: var(--ink-2); line-height: 1.3; }
+.div-row .lbl small { display: block; color: var(--ink-3); font-size: 0.78rem; font-variant-numeric: tabular-nums; }
+.div-row .val { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+.div-row .val.pos { color: var(--gain-ink); }
+.div-row .val.neg { color: var(--loss-ink); }
+.div-track { position: relative; height: 14px; }
+.div-track::before { content: ""; position: absolute; left: var(--zero); top: -5px; bottom: -5px; width: 1.5px; background: var(--ink-3); }
+.div-track .fill { position: absolute; top: 0; bottom: 0; }
+.div-track .fill.pos { background: var(--gain); border-radius: 0 4px 4px 0; }
+.div-track .fill.neg { background: var(--loss); border-radius: 4px 0 0 4px; }
+
+/* ratio dot rows */
+.ratio { display: grid; gap: 0.5rem; }
+.ratio-row { display: grid; grid-template-columns: minmax(7rem, 10rem) minmax(0, 1fr) 3.4rem; gap: 0.75rem; align-items: center; font-size: 0.875rem; }
+.ratio-row .lbl { color: var(--ink-2); }
+.ratio-row .val { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+.r-track { position: relative; height: 18px; border-bottom: 1px solid var(--rule); }
+.r-track::after { content: ""; position: absolute; left: var(--avg); top: -4px; bottom: -4px; border-left: 1.5px dashed var(--ink-3); }
+.r-dot { position: absolute; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: var(--silver); box-shadow: 0 0 0 2px var(--surface); }
+
+/* causes */
+.causes { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; counter-reset: cause; }
+.cause { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 1.1rem 1.25rem; display: grid; gap: 0.7rem; }
+.cause-top { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.25rem 0.9rem; align-items: start; }
+.rank { font-family: var(--font-display); font-weight: 800; font-stretch: 115%; font-size: 2rem; line-height: 1; color: var(--gold-ink); grid-row: span 2; min-width: 1.5rem; }
+.cause h3 { font-size: 1.125rem; }
+.meter { display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-2); letter-spacing: 0.02em; }
+.pips { display: inline-flex; gap: 3px; }
+.pips i { width: 14px; height: 6px; border-radius: 1px; background: var(--surface-2); border: 1px solid var(--rule); }
+.pips i.on { background: var(--ink-2); border-color: var(--ink-2); }
+.cause ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; font-size: 0.9375rem; }
+.counter { font-size: 0.875rem; color: var(--ink-2); border-top: 1px dashed var(--rule); padding-top: 0.6rem; }
+.counter b { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; margin-right: 0.35rem; }
+
+/* stat tiles (small) */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); gap: 0.6rem; }
+.tile { background: var(--paper); border-radius: 3px; padding: 0.7rem 0.8rem; display: grid; gap: 0.15rem; }
+.tile .k { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+.tile .v { font-family: var(--font-display); font-stretch: 108%; font-weight: 750; font-size: 1.35rem; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.tile .d { font-size: 0.78rem; color: var(--ink-2); }
+
+/* two-column grid of blocks */
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; }
+.block { display: grid; gap: 0.45rem; align-content: start; }
+.block h3 { font-size: 1.0625rem; }
+.block p { font-size: 0.9375rem; color: var(--ink); }
+
+/* math box */
+.math { font-family: var(--font-mono); font-size: 0.875rem; background: var(--surface-2); border-radius: 3px; padding: 0.8rem 0.9rem; display: grid; gap: 0.3rem; overflow-x: auto; }
+.math .eq { white-space: nowrap; }
+.math .eq b { color: var(--ink); }
+
+/* personas */
+.who { display: grid; gap: 0.6rem; }
+.who-row { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: 0.4rem 1.25rem; padding: 0.9rem 0; border-top: 1px solid var(--rule); }
+.who-row:first-child { border-top: 0; padding-top: 0; }
+.who-row h3 { font-size: 1rem; font-stretch: 100%; font-family: var(--font-body); font-weight: 600; }
+.who-row .do { font-size: 0.9375rem; }
+.who-row .why { font-size: 0.8125rem; color: var(--ink-3); margin-top: 0.3rem; }
+@media (max-width: 640px) { .who-row { grid-template-columns: minmax(0, 1fr); } }
+
+.principles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); border: 1.5px solid var(--ink); border-radius: 3px; }
+.principles li { padding: 0.8rem 0.9rem; border-right: 1px solid var(--rule-strong); display: grid; gap: 0.2rem; }
+.principles li:last-child { border-right: 0; }
+.principles b { font-family: var(--font-display); font-stretch: 108%; font-size: 1rem; }
+.principles span { font-size: 0.8125rem; color: var(--ink-2); line-height: 1.4; }
+@media (max-width: 760px) { .principles li { border-right: 0; border-bottom: 1px solid var(--rule-strong); } .principles li:last-child { border-bottom: 0; } }
+
+/* mistakes */
+.mistakes { margin: 0; padding-left: 1.4rem; display: grid; gap: 0.6rem; max-width: 44rem; }
+.mistakes li::marker { font-family: var(--font-mono); color: var(--loss-ink); font-weight: 600; }
+
+/* video */
+.flow { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: step; }
+.flow li { counter-increment: step; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: 0.2rem 0.9rem; padding: 0.9rem 0; border-top: 1px solid var(--rule); }
+.flow li::before { content: counter(step, decimal-leading-zero); font-family: var(--font-mono); font-weight: 600; color: var(--gold-ink); grid-row: span 3; padding-top: 0.1rem; }
+.flow h3 { font-size: 1.0625rem; }
+.flow .line { font-size: 1rem; font-style: italic; color: var(--ink); }
+.flow .show { font-size: 0.8125rem; color: var(--ink-3); }
+.flow .show a { color: var(--ink-2); }
+.lines { display: grid; gap: 0.75rem; }
+.quote { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 0.9rem 1rem; display: grid; gap: 0.3rem; }
+.quote p { font-size: 1.0625rem; line-height: 1.5; }
+.quote .why { font-size: 0.8125rem; color: var(--ink-3); }
+.avoid { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+.avoid li { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); gap: 0.5rem; font-size: 0.9375rem; }
+.avoid li::before { content: "✕"; color: var(--loss-ink); font-weight: 700; font-family: var(--font-mono); }
+.avoid .why { display: block; color: var(--ink-3); font-size: 0.8125rem; }
+
+.checks { list-style: none; margin: 0; padding: 0; display: grid; }
+.checks li { border-top: 1px solid var(--rule); }
+.checks li:first-child { border-top: 0; }
+.checks label { display: grid; grid-template-columns: 1.4rem 2rem minmax(0, 1fr); gap: 0.5rem; padding: 0.6rem 0; cursor: pointer; font-size: 0.875rem; }
+.checks input { margin: 0.2rem 0 0; width: 1rem; height: 1rem; accent-color: var(--gain); }
+.checks .n { font-family: var(--font-mono); color: var(--ink-3); font-size: 0.75rem; padding-top: 0.12rem; }
+.checks .what { color: var(--ink); }
+.checks .how { display: block; color: var(--ink-3); font-size: 0.8rem; }
+.checks li.done .what { color: var(--ink-3); text-decoration: line-through; text-decoration-color: var(--ink-3); }
+.progress { font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-2); }
+
+/* sources */
+.sources { columns: 2 18rem; column-gap: 2rem; margin: 0; padding-left: 1.4rem; font-size: 0.78rem; line-height: 1.45; color: var(--ink-2); }
+.sources li { break-inside: avoid; margin-bottom: 0.3rem; }
+.sources .host { color: var(--ink-3); font-family: var(--font-mono); font-size: 0.68rem; }
+.legend-flags { display: grid; gap: 0.4rem; font-size: 0.875rem; }
+
+footer { margin-top: 4rem; padding-top: 1.25rem; border-top: 2px solid var(--ink); display: grid; gap: 0.4rem; font-size: 0.8125rem; color: var(--ink-3); max-width: 50rem; }
+
+/* tooltip */
+.tip {
+  position: fixed; z-index: 20; max-width: 18rem; pointer-events: none;
+  background: var(--ink); color: var(--paper); font: 0.78rem/1.4 var(--font-body);
+  padding: 0.45rem 0.6rem; border-radius: 3px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <div class="eyebrow"><b>Research brief</b><span>Video: “Gold/Silver kyon gira”</span><span>Recording Thu 26 Nov 2026</span></div>
+    <h1>Gold<span class="slash">/</span>Silver kyon gira?</h1>
+    <p class="dek"><strong>Rate hikes and margin calls sank bullion.</strong> The US Federal Reserve swung from cutting rates to raising them, and a market full of borrowed money was forced to sell. This brief covers the numbers, the causes ranked by evidence, the India-specific layer, and what Indian investors can reasonably do next.</p>
+    <dl class="hallmark" aria-label="Brief details">
+      <div><dt>Data as of</dt><dd>24 Nov 2026</dd></div>
+      <div><dt>Status</dt><dd>As reported · verify live</dd></div>
+      <div><dt>Units</dt><dd>$/oz · ₹/10 g · ₹/kg</dd></div>
+      <div><dt>Sources</dt><dd>224 linked</dd></div>
+    </dl>
+  </header>
+
+  <div class="figures" aria-label="Headline figures">
+    <div class="fig">
+      <div class="k"><span class="swatch gold"></span>Gold, spot</div>
+      <div class="v">−37.1%</div>
+      <div class="d">$5,589 (28 Jan) → $3,513.54 (20 Nov)</div>
+    </div>
+    <div class="fig">
+      <div class="k"><span class="swatch silver"></span>Silver, spot</div>
+      <div class="v">−66.2%</div>
+      <div class="d">$121.64 (29 Jan) → $41.12 (20 Nov)</div>
+    </div>
+    <div class="fig">
+      <div class="k"><span class="swatch gold"></span>MCX gold</div>
+      <div class="v">−32.5%</div>
+      <div class="d">₹1,80,501 → ₹1,21,778 per 10 g</div>
+    </div>
+    <div class="fig">
+      <div class="k"><span class="swatch gold"></span>IBJA 24K, 2026</div>
+      <div class="v soft">−7.0%</div>
+      <div class="d">vs about −16% in dollars, because of the import-duty hike</div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Sections">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#answer"><span class="n">01</span>The short answer</a></li>
+        <li><a href="#fall"><span class="n">02</span>How far it fell</a></li>
+        <li><a href="#causes"><span class="n">03</span>Why it fell</a></li>
+        <li><a href="#silver"><span class="n">04</span>Why silver fell harder</a></li>
+        <li><a href="#india"><span class="n">05</span>The India layer</a></li>
+        <li><a href="#losses"><span class="n">06</span>Who carries the losses</a></li>
+        <li><a href="#outlook"><span class="n">07</span>Outlook for 2027</a></li>
+        <li><a href="#playbook"><span class="n">08</span>What investors can do</a></li>
+        <li><a href="#watch"><span class="n">09</span>Dates to watch</a></li>
+        <li><a href="#video"><span class="n">10</span>For the video</a></li>
+        <li><a href="#method"><span class="n">11</span>Sources and method</a></li>
+      </ol>
+    </nav>
+
+    <main>
+      <!-- 01 -->
+      <section id="answer" aria-labelledby="h-answer">
+        <div class="sec-head"><span class="sec-num">01 · Summary</span><h2 id="h-answer">The short answer</h2></div>
+        <p class="lede">Gold and silver fell for two reasons. <strong>The Fed turned from cutting rates to hiking them</strong>, and <strong>leveraged positions were forced to sell</strong> into that turn. Everything else made the fall bigger or smaller.</p>
+        <ul class="facts">
+          <li><strong>The Fed is cause number one.</strong> Each large down-leg lines up with a Fed event: Kevin Warsh named as the next chair (30 Jan), a hawkish first meeting (17 Jun), the first hike since 2023 (16 Sep), then hot CPI and hawkish minutes (10 and 18 Nov). A December hike is about 97% priced. The 10-year US real yield cleared at 2.903% on 19 Nov, the highest since 2002.</li>
+          <li><strong>Leverage turned a correction into a crash.</strong> CME raised margins five times in nine days around the January top. MCX's effective silver margin reached about 72%. In November, margin calls from the AI-stock rout forced investors to sell gold for cash.</li>
+          <li><strong>The war did not help gold.</strong> The Iran war pushed oil and inflation up, which meant more rate hikes. Gold fell 12% in March and rose when a ceasefire was agreed.</li>
+          <li><strong>Silver fell almost twice as hard</strong> (−66% against −37%). Solar makers cut silver use by about 19%, the 2025 London squeeze and the US tariff premium unwound, and speculators left.</li>
+          <li><strong>Indians lost less.</strong> MCX gold is 32.5% off its peak, and IBJA 24K gold is down only 7% for 2026, against about 16% in dollars. The reason is the 13 May import-duty hike from 6% to 15%. If a Budget cuts the duty back, rupee prices fall about 7.8% overnight.</li>
+          <li><strong>The losses are concentrated.</strong> They sit with 2026 buyers (a record ₹24,040 crore went into gold ETFs in the peak month), leveraged MCX traders and gold-loan borrowers at maximum loan-to-value. End-2024 buyers are still up about 62%, and 2020–21 Sovereign Gold Bonds about 163%.</li>
+        </ul>
+        <div class="say">
+          <div class="panel-label">Ek line mein (on camera)</div>
+          <p>“Fed ne rate cut ki jagah rate hike shuru kiya, aur udhaar ke paise par bana rally toot gaya. War se sona upar nahi gaya, kyunki war ka matlab tha mehnga tel, zyada inflation aur aur zyada rate hike.”</p>
+        </div>
+        <div class="panel">
+          <div class="panel-label">Summary to forward on WhatsApp</div>
+          <textarea id="wa-text" readonly aria-label="WhatsApp summary text">Gold/Silver kyon gira – research brief (data as of 24 Nov 2026)
+• Gold: $5,589 (28 Jan) → $3,514 (20 Nov), −37%. Silver: $121.64 → $41.12, −66%.
+• Reason 1: US Fed went from rate cuts to hikes (first hike 16 Sep; Dec hike ~97% priced). US 10-yr real yield 2.9%, highest since 2002.
+• Reason 2: Leverage. CME/MCX margin hikes, and margin calls in the AI-stock crash, forced selling.
+• Iran war hurt gold: oil → inflation → hikes. Gold −12% in March.
+• Silver fell harder: solar silver use −19%, London squeeze and tariff premium gone, speculators out.
+• India: MCX gold −32.5% from peak, but IBJA 24K only −7% in 2026, because import duty went 6% → 15% on 13 May.
+• Losses sit with 2026 buyers, MCX leverage and max-LTV gold loans. Pre-2025 buyers and old SGBs are still well up.
+• Playbook: no panic selling, no leverage, gold 5–10% / silver 0–3% of portfolio, buy in stages via ETFs or FoFs.
+• Watch: US PCE (25/26 Nov), Fed decision 9 Dec, Budget 1 Feb 2027 (import duty).</textarea>
+          <div class="row">
+            <button class="btn" type="button" id="copy-wa">Copy summary</button>
+            <span class="status" id="copy-status" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 -->
+      <section id="fall" aria-labelledby="h-fall">
+        <div class="sec-head"><span class="sec-num">02 · The move</span><h2 id="h-fall">A ten-month fall in six legs</h2></div>
+        <p class="lede">The fall came in six legs, after two cracks in late 2025. The 20 Nov low of <strong>$3,513.54</strong> is below the October 2025 record of $4,381, so every gain since then is gone. On a closing basis the January peak was lower, about $5,414–5,447, which gives −33.9% for gold and −64.3% for silver <a class="src" href="https://www.ebc.com/forex/gold-vs-silver-2026-drawdown-comparison">EBC</a>.</p>
+
+        <figure>
+          <div class="chart-frame">
+<svg class="chart" viewBox="0 0 800 384" role="img" aria-labelledby="gold-chart-title gold-chart-desc">
+<title id="gold-chart-title">Gold spot price, October 2025 to November 2026</title>
+<desc id="gold-chart-desc">Gold rose to an intraday record of $5,589 on 28 January 2026, then fell in legs to $3,513.54 on 20 November 2026, a fall of 37.1 percent. Each large fall lines up with a Federal Reserve event.</desc>
+<rect class="band" x="284.4" y="52" width="44.2" height="292"/>
+<text class="ax ax-band" x="306.5" y="336" text-anchor="middle">Iran war</text>
+<line class="grid base" x1="62" x2="688" y1="344.0" y2="344.0"/>
+<text class="ax" x="52" y="348.0" text-anchor="end">$3,000</text>
+<line class="grid" x1="62" x2="688" y1="295.3" y2="295.3"/>
+<text class="ax" x="52" y="299.3" text-anchor="end">$3,500</text>
+<line class="grid" x1="62" x2="688" y1="246.7" y2="246.7"/>
+<text class="ax" x="52" y="250.7" text-anchor="end">$4,000</text>
+<line class="grid" x1="62" x2="688" y1="198.0" y2="198.0"/>
+<text class="ax" x="52" y="202.0" text-anchor="end">$4,500</text>
+<line class="grid" x1="62" x2="688" y1="149.3" y2="149.3"/>
+<text class="ax" x="52" y="153.3" text-anchor="end">$5,000</text>
+<line class="grid" x1="62" x2="688" y1="100.7" y2="100.7"/>
+<text class="ax" x="52" y="104.7" text-anchor="end">$5,500</text>
+<line class="grid" x1="62" x2="688" y1="52.0" y2="52.0"/>
+<text class="ax" x="52" y="56.0" text-anchor="end">$6,000</text>
+<line class="tick" x1="62.0" x2="62.0" y1="344" y2="349"/>
+<text class="ax" x="64.0" y="362">Oct</text>
+<text class="ax ax-year" x="64.0" y="376">2025</text>
+<line class="tick" x1="107.7" x2="107.7" y1="344" y2="349"/>
+<text class="ax" x="109.7" y="362">Nov</text>
+<line class="tick" x1="151.8" x2="151.8" y1="344" y2="349"/>
+<text class="ax" x="153.8" y="362">Dec</text>
+<line class="tick" x1="197.5" x2="197.5" y1="344" y2="349"/>
+<text class="ax" x="199.5" y="362">Jan</text>
+<text class="ax ax-year" x="199.5" y="376">2026</text>
+<line class="tick" x1="243.2" x2="243.2" y1="344" y2="349"/>
+<text class="ax" x="245.2" y="362">Feb</text>
+<line class="tick" x1="284.4" x2="284.4" y1="344" y2="349"/>
+<text class="ax" x="286.4" y="362">Mar</text>
+<line class="tick" x1="330.1" x2="330.1" y1="344" y2="349"/>
+<text class="ax" x="332.1" y="362">Apr</text>
+<line class="tick" x1="374.3" x2="374.3" y1="344" y2="349"/>
+<text class="ax" x="376.3" y="362">May</text>
+<line class="tick" x1="419.9" x2="419.9" y1="344" y2="349"/>
+<text class="ax" x="421.9" y="362">Jun</text>
+<line class="tick" x1="464.1" x2="464.1" y1="344" y2="349"/>
+<text class="ax" x="466.1" y="362">Jul</text>
+<line class="tick" x1="509.8" x2="509.8" y1="344" y2="349"/>
+<text class="ax" x="511.8" y="362">Aug</text>
+<line class="tick" x1="555.4" x2="555.4" y1="344" y2="349"/>
+<text class="ax" x="557.4" y="362">Sep</text>
+<line class="tick" x1="599.6" x2="599.6" y1="344" y2="349"/>
+<text class="ax" x="601.6" y="362">Oct</text>
+<line class="tick" x1="645.3" x2="645.3" y1="344" y2="349"/>
+<text class="ax" x="647.3" y="362">Nov</text>
+<line class="event" x1="240.2" x2="240.2" y1="46" y2="344"/>
+<text class="ax ax-event" x="236.2" y="22" text-anchor="end">Warsh named · 30 Jan</text>
+<line class="event" x1="443.5" x2="443.5" y1="46" y2="344"/>
+<text class="ax ax-event" x="439.5" y="22" text-anchor="end">Hawkish hold · 17 Jun</text>
+<line class="event" x1="577.5" x2="577.5" y1="46" y2="344"/>
+<text class="ax ax-event" x="581.5" y="22" text-anchor="start">First hike · 16 Sep</text>
+<line class="event" x1="670.3" x2="670.3" y1="46" y2="344"/>
+<text class="ax ax-event" x="666.3" y="38" text-anchor="end">Minutes + Waller · 18 Nov</text>
+<line class="ref" x1="90.0" x2="688" y1="209.6" y2="209.6"/>
+<text class="ax ax-ref halo" x="686" y="203.6" text-anchor="end">Oct 2025 record $4,381</text>
+<line class="ref" x1="243.3" x2="702" y1="92.0" y2="92.0"/>
+<line class="ref" x1="679.3" x2="702" y1="294.0" y2="294.0"/>
+<path class="bracket" d="M698,92.0 H702 V294.0 H698"/>
+<text class="drop" x="708" y="191.0">−37.1%</text>
+<text class="ax" x="708" y="207.0">peak to low</text>
+<path class="series" d="M90.0,209.6 L91.5,238.7 L188.7,193.2 L193.1,213.2 L199.0,215.4 L237.3,92.0 L240.2,160.7 L281.5,126.4 L318.3,237.1 L328.6,187.5 L340.4,169.8 L486.2,242.9 L528.9,204.6 L598.2,229.5 L642.3,255.1 L651.2,234.9 L673.3,294.0 L679.2,281.2"/>
+<text class="ax ax-strong halo" x="228.3" y="96.0" text-anchor="end">Record $5,589</text>
+<text class="ax ax-strong halo" x="673.3" y="314.0" text-anchor="end">$3,514 · 20 Nov</text>
+<circle class="pt" cx="90.0" cy="209.6" r="4.5"/>
+<circle class="hit" cx="90.0" cy="209.6" r="12" tabindex="0" data-tip="20 Oct 2025 · $4,381.21/oz · Record at the time (20 Oct 2025)"><title>20 Oct 2025 · $4,381.21/oz · Record at the time (20 Oct 2025)</title></circle>
+<circle class="pt" cx="91.5" cy="238.7" r="4.5"/>
+<circle class="hit" cx="91.5" cy="238.7" r="12" tabindex="0" data-tip="21 Oct 2025 · $4,082/oz · -6.3% in a day, biggest fall since Apr 2013"><title>21 Oct 2025 · $4,082/oz · -6.3% in a day, biggest fall since Apr 2013</title></circle>
+<circle class="pt" cx="188.7" cy="193.2" r="4.5"/>
+<circle class="hit" cx="188.7" cy="193.2" r="12" tabindex="0" data-tip="26 Dec 2025 · $4,549.71/oz · New record (26 Dec 2025)"><title>26 Dec 2025 · $4,549.71/oz · New record (26 Dec 2025)</title></circle>
+<circle class="pt" cx="193.1" cy="213.2" r="4.5"/>
+<circle class="hit" cx="193.1" cy="213.2" r="12" tabindex="0" data-tip="29 Dec 2025 · $4,343.92/oz · -4.2%: CME margin hike, Ukraine peace hopes"><title>29 Dec 2025 · $4,343.92/oz · -4.2%: CME margin hike, Ukraine peace hopes</title></circle>
+<circle class="pt" cx="199.0" cy="215.4" r="4.5"/>
+<circle class="hit" cx="199.0" cy="215.4" r="12" tabindex="0" data-tip="2 Jan 2026 · $4,321.48/oz · 2 Jan 2026 close"><title>2 Jan 2026 · $4,321.48/oz · 2 Jan 2026 close</title></circle>
+<circle class="pt" cx="237.3" cy="92.0" r="4.5"/>
+<circle class="hit" cx="237.3" cy="92.0" r="12" tabindex="0" data-tip="28 Jan 2026 · $5,589.38/oz · All-time intraday high (28-29 Jan; feeds show $5,589-5,602)"><title>28 Jan 2026 · $5,589.38/oz · All-time intraday high (28-29 Jan; feeds show $5,589-5,602)</title></circle>
+<circle class="pt" cx="240.2" cy="160.7" r="4.5"/>
+<circle class="hit" cx="240.2" cy="160.7" r="12" tabindex="0" data-tip="30 Jan 2026 · $4,883.62/oz · -9.5%: Warsh named Fed chair pick; worst day since 1983"><title>30 Jan 2026 · $4,883.62/oz · -9.5%: Warsh named Fed chair pick; worst day since 1983</title></circle>
+<circle class="pt calc" cx="281.5" cy="126.4" r="4.5"/>
+<circle class="hit" cx="281.5" cy="126.4" r="12" tabindex="0" data-tip="27 Feb 2026 · $5,236/oz · End-Feb level, derived from March&#x27;s reported -12% (calc.)"><title>27 Feb 2026 · $5,236/oz · End-Feb level, derived from March&#x27;s reported -12% (calc.)</title></circle>
+<circle class="pt" cx="318.3" cy="237.1" r="4.5"/>
+<circle class="hit" cx="318.3" cy="237.1" r="12" tabindex="0" data-tip="24 Mar 2026 · $4,098/oz · March low, during the Iran war"><title>24 Mar 2026 · $4,098/oz · March low, during the Iran war</title></circle>
+<circle class="pt" cx="328.6" cy="187.5" r="4.5"/>
+<circle class="hit" cx="328.6" cy="187.5" r="12" tabindex="0" data-tip="31 Mar 2026 · $4,608/oz · March close: -12%, worst month since Jun 2013 (WGC)"><title>31 Mar 2026 · $4,608/oz · March close: -12%, worst month since Jun 2013 (WGC)</title></circle>
+<circle class="pt" cx="340.4" cy="169.8" r="4.5"/>
+<circle class="hit" cx="340.4" cy="169.8" r="12" tabindex="0" data-tip="8 Apr 2026 · $4,790/oz · US-Iran ceasefire: gold +2%"><title>8 Apr 2026 · $4,790/oz · US-Iran ceasefire: gold +2%</title></circle>
+<circle class="pt" cx="486.2" cy="242.9" r="4.5"/>
+<circle class="hit" cx="486.2" cy="242.9" r="12" tabindex="0" data-tip="16 Jul 2026 · $4,039/oz · Mid-year trough (one source has $3,974 on 24 Jun)"><title>16 Jul 2026 · $4,039/oz · Mid-year trough (one source has $3,974 on 24 Jun)</title></circle>
+<circle class="pt" cx="528.9" cy="204.6" r="4.5"/>
+<circle class="hit" cx="528.9" cy="204.6" r="12" tabindex="0" data-tip="14 Aug 2026 · $4,432/oz · August rebound"><title>14 Aug 2026 · $4,432/oz · August rebound</title></circle>
+<circle class="pt calc" cx="598.2" cy="229.5" r="4.5"/>
+<circle class="hit" cx="598.2" cy="229.5" r="12" tabindex="0" data-tip="30 Sep 2026 · $4,176/oz · End-Sep level, derived from October&#x27;s reported -6.3% (calc.)"><title>30 Sep 2026 · $4,176/oz · End-Sep level, derived from October&#x27;s reported -6.3% (calc.)</title></circle>
+<circle class="pt" cx="642.3" cy="255.1" r="4.5"/>
+<circle class="hit" cx="642.3" cy="255.1" r="12" tabindex="0" data-tip="30 Oct 2026 · $3,913/oz · October close: -6.3%"><title>30 Oct 2026 · $3,913/oz · October close: -6.3%</title></circle>
+<circle class="pt" cx="651.2" cy="234.9" r="4.5"/>
+<circle class="hit" cx="651.2" cy="234.9" r="12" tabindex="0" data-tip="5 Nov 2026 · $4,121/oz · 5 Nov, before the November rout"><title>5 Nov 2026 · $4,121/oz · 5 Nov, before the November rout</title></circle>
+<circle class="pt" cx="673.3" cy="294.0" r="4.5"/>
+<circle class="hit" cx="673.3" cy="294.0" r="12" tabindex="0" data-tip="20 Nov 2026 · $3,513.54/oz · 20 Nov low: lowest since Sep 2025"><title>20 Nov 2026 · $3,513.54/oz · 20 Nov low: lowest since Sep 2025</title></circle>
+<circle class="pt" cx="679.2" cy="281.2" r="4.5"/>
+<circle class="hit" cx="679.2" cy="281.2" r="12" tabindex="0" data-tip="24 Nov 2026 · $3,645/oz · 24 Nov (quotes ranged $3,560-3,645 during the day)"><title>24 Nov 2026 · $3,645/oz · 24 Nov (quotes ranged $3,560-3,645 during the day)</title></circle>
+</svg>
+          </div>
+          <div class="legend" aria-hidden="true">
+            <span><i class="key-dot"></i>Reported spot price</span>
+            <span><i class="key-dot hollow"></i>Month-end level derived from a reported % move</span>
+            <span><i class="key-line"></i>Fed event</span>
+            <span><i class="key-band"></i>Iran war (March)</span>
+          </div>
+          <figcaption>Gold spot, US$ per troy ounce (31.1 g). Reported prices on the dates shown, joined by straight lines. This is not a daily series, so moves between points are not shown. Hover or tab to a point for its source note. Peak is the intraday high.</figcaption>
+          <details class="data">
+            <summary>Show the chart data as a table</summary>
+            <div class="table-wrap"><table class="t-mid"><thead><tr><th>Date</th><th>Gold $/oz</th><th>Note</th></tr></thead><tbody>
+<tr><td class="num">20 Oct 2025</td><td class="num">$4,381.21</td><td>Record at the time (20 Oct 2025)</td></tr>
+<tr><td class="num">21 Oct 2025</td><td class="num">$4,082</td><td>-6.3% in a day, biggest fall since Apr 2013</td></tr>
+<tr><td class="num">26 Dec 2025</td><td class="num">$4,549.71</td><td>New record (26 Dec 2025)</td></tr>
+<tr><td class="num">29 Dec 2025</td><td class="num">$4,343.92</td><td>-4.2%: CME margin hike, Ukraine peace hopes</td></tr>
+<tr><td class="num">2 Jan 2026</td><td class="num">$4,321.48</td><td>2 Jan 2026 close</td></tr>
+<tr><td class="num">28 Jan 2026</td><td class="num">$5,589.38</td><td>All-time intraday high (28-29 Jan; feeds show $5,589-5,602)</td></tr>
+<tr><td class="num">30 Jan 2026</td><td class="num">$4,883.62</td><td>-9.5%: Warsh named Fed chair pick; worst day since 1983</td></tr>
+<tr><td class="num">27 Feb 2026</td><td class="num">$5,236</td><td>End-Feb level, derived from March&#x27;s reported -12% (calc.)</td></tr>
+<tr><td class="num">24 Mar 2026</td><td class="num">$4,098</td><td>March low, during the Iran war</td></tr>
+<tr><td class="num">31 Mar 2026</td><td class="num">$4,608</td><td>March close: -12%, worst month since Jun 2013 (WGC)</td></tr>
+<tr><td class="num">8 Apr 2026</td><td class="num">$4,790</td><td>US-Iran ceasefire: gold +2%</td></tr>
+<tr><td class="num">16 Jul 2026</td><td class="num">$4,039</td><td>Mid-year trough (one source has $3,974 on 24 Jun)</td></tr>
+<tr><td class="num">14 Aug 2026</td><td class="num">$4,432</td><td>August rebound</td></tr>
+<tr><td class="num">30 Sep 2026</td><td class="num">$4,176</td><td>End-Sep level, derived from October&#x27;s reported -6.3% (calc.)</td></tr>
+<tr><td class="num">30 Oct 2026</td><td class="num">$3,913</td><td>October close: -6.3%</td></tr>
+<tr><td class="num">5 Nov 2026</td><td class="num">$4,121</td><td>5 Nov, before the November rout</td></tr>
+<tr><td class="num">20 Nov 2026</td><td class="num">$3,513.54</td><td>20 Nov low: lowest since Sep 2025</td></tr>
+<tr><td class="num">24 Nov 2026</td><td class="num">$3,645</td><td>24 Nov (quotes ranged $3,560-3,645 during the day)</td></tr>
+            </tbody></table></div>
+          </details>
+        </figure>
+
+        <div class="table-wrap">
+          <table class="t-wide">
+            <thead><tr><th>Leg</th><th>Dates</th><th>Gold</th><th>Silver</th><th>Trigger</th></tr></thead>
+            <tbody>
+              <tr><td>Early crack</td><td class="num">20–28 Oct 2025</td><td>Record $4,381 on 20 Oct, then −6.3% to $4,082 on 21 Oct, biggest daily fall since 2013 <a class="src" href="https://www.businesstoday.in/personal-finance/investment/story/gold-and-silver-prices-drop-sharply-marking-biggest-decline-since-2013-and-2021-499097-2025-10-21">BT</a></td><td>Record $54.48 on 17 Oct; futures −15.4% by 28 Oct <span class="flag one">1 source</span></td><td>Profit-taking; US-China trade truce</td></tr>
+              <tr><td>Year-end shakeout</td><td class="num">26–29 Dec 2025</td><td>Record $4,550 on 26 Dec, then −4.2%</td><td>Above $83, then futures −7.3%</td><td>CME silver margin +13.6%; Ukraine peace hopes <a class="src" href="https://m.washingtontimes.com/news/2025/dec/29/surging-silver-gold-slide-cme-raises-margin-requirements/">AP</a></td></tr>
+              <tr><td><strong>1 · Blow-off and crash</strong></td><td class="num">28 Jan – 2 Feb 2026</td><td><strong>−9.5% to $4,884 on 30 Jan</strong>, worst day since 1983; another −6.1% on 2 Feb <a class="src" href="https://thepeninsulaqatar.com/article/31/01/2026/gold-prices-post-biggest-one-day-drop-in-four-decades">Peninsula</a></td><td><strong>Futures −31.4% on 30 Jan</strong>, worst day since March 1980; MCX silver hit its 15% lower circuit <a class="src" href="https://www.cnbc.com/2026/01/30/silver-gold-fall-price-usd-dollar-fed-warsh-chair-trump-metals.html">CNBC</a></td><td>Warsh named as Fed chair pick; five CME margin hikes in nine days</td></tr>
+              <tr><td><strong>2 · Iran-war month</strong></td><td class="num">March 2026</td><td>−12% to $4,608, worst month since June 2013 (WGC) <span class="flag cf">conflict: CNBC says since 2008</span> <a class="src" href="https://www.kitco.com/news/article/2026-04-08/dissecting-what-really-happened-and-what-didnt-during-golds-iran-war">Kitco/WGC</a></td><td>No clean series found</td><td>Oil-driven inflation killed rate-cut hopes; record $12bn gold-ETF outflow</td></tr>
+              <tr><td><strong>3 · Mid-year grind</strong></td><td class="num">Apr – Aug 2026</td><td>Trough near $4,039 (16 Jul), rebound to $4,432 (14 Aug) <span class="flag cf">conflict: $3,974 on 24 Jun</span></td><td>MCX silver −14% from 5 to 24 Jun</td><td>Warsh's hawkish first meeting as chair (17 Jun)</td></tr>
+              <tr><td><strong>4 · Fed starts hiking</strong></td><td class="num">Sep – Oct 2026</td><td>October −6.3% to $3,913 <a class="src" href="https://www.gold.org/goldhub/research/gold-market-commentary-october-2026">WGC</a></td><td>−6% on 14 Oct after hot CPI; about −18% in October; below $50 on 30 Oct</td><td>First Fed hike since 2023 (16 Sep); hot inflation</td></tr>
+              <tr><td><strong>5 · November rout</strong></td><td class="num">5 – 20 Nov 2026</td><td>$4,121 → <strong>$3,513.54</strong>, −14.7% in 11 sessions <span class="flag calc">calc</span>; worst week since March</td><td>$52.78 → <strong>$41.12</strong>, −22% <span class="flag calc">calc</span></td><td>Hot October CPI, Fed minutes, Waller's 50bp call, margin calls in the AI-stock rout <a class="src" href="https://investinglive.com/commodities/gold-sinks-9-in-a-week-as-margin-calls-and-fed-hike-bets-override-its-haven-role/">investinglive</a></td></tr>
+              <tr><td>6 · Shaky bounce</td><td class="num">23 – 24 Nov 2026</td><td>+2.75% to $3,635 on 23 Nov; $3,560–3,645 on 24 Nov <a class="src" href="https://www.kitco.com/news/article/2026-11-23/gold-silver-prices-see-sharp-rebounds-ai-shares-rally-renewed-fed">Kitco</a></td><td>About $43 on 23 Nov; $40.76–42.84 on 24 Nov</td><td>Traders cut bets on a half-point hike; AI shares rallied</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-wrap">
+          <table class="t-mid">
+            <caption>Bases: 2 Jan 2026 closes ($4,321.48 gold, $71.74 silver) and end-2024 closes ($2,608.09, $28.91). All percentages are calculated from cited prices.</caption>
+            <thead><tr><th>Measure</th><th>Latest used</th><th>From record</th><th>2026 so far</th><th>Since end-2024</th></tr></thead>
+            <tbody>
+              <tr><td>Gold spot</td><td class="num">$3,645 (24 Nov)</td><td class="num neg">−34.8%</td><td class="num neg">−15.7%</td><td class="num pos">+39.8%</td></tr>
+              <tr><td>Gold at 20 Nov low</td><td class="num">$3,513.54</td><td class="num neg">−37.1%</td><td class="num neg">−18.7%</td><td class="num pos">+34.7%</td></tr>
+              <tr><td>Silver spot</td><td class="num">$42.84 (24 Nov)</td><td class="num neg">−64.8%</td><td class="num neg">−40.3%</td><td class="num pos">+48.2%</td></tr>
+              <tr><td>Silver at 20 Nov low</td><td class="num">$41.12</td><td class="num neg">−66.2%</td><td class="num neg">−42.7%</td><td class="num pos">+42.2%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid2">
+          <div class="panel">
+            <div class="panel-label">Not a metals-only sell-off · 20 Nov 2026</div>
+            <div class="table-wrap" style="border:0">
+              <table>
+                <tbody>
+                  <tr><td>S&amp;P 500</td><td class="num">6,910.39</td><td class="small">−3.7% that day; −11.6% from its October record</td></tr>
+                  <tr><td>Nasdaq</td><td class="num neg">−5.28%</td><td class="small">2026 gain wiped out; Nvidia −14%</td></tr>
+                  <tr><td>Bitcoin</td><td class="num">~$55,100</td><td class="small">21 Nov; about −56% from its Oct 2025 record</td></tr>
+                  <tr><td>US 10-yr yield</td><td class="num">4.92%</td><td class="small">Indian reports say ~5.1% <span class="flag cf">conflict</span></td></tr>
+                  <tr><td>Dollar index</td><td class="num">104.54</td><td class="small">52-week high, 23 Nov</td></tr>
+                  <tr><td>Nifty 50</td><td class="num pos">25,800.60</td><td class="small">Nine-month high, 2.2% below its 5 Jan record</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small">This time gold was not a hedge. It was sold alongside tech stocks and crypto to raise cash, while foreign money moved into Indian equities. <a class="src" href="https://amgreatness.com/2026/11/21/ai-sell-off-drags-dow-sp-500-into-correction-as-nasdaqs-gains-for-the-year-vanish/">AmGreatness</a> <a class="src" href="https://hdfcsky.com/news/market-close-report-today-november-20-2026-nifty-sensex-scale-nine-month-highs-as-investors-dump-global-ai-for-india">HDFC Sky</a></p>
+          </div>
+          <div class="panel">
+            <div class="panel-label">Gold-silver ratio (oz of silver per oz of gold)</div>
+            <div class="ratio" style="--avg: 76.4%">
+              <div class="ratio-row"><span class="lbl">End-2024</span><span class="r-track"><i class="r-dot" style="left: 90.9%"></i></span><span class="val">~90</span></div>
+              <div class="ratio-row"><span class="lbl">Start of 2026</span><span class="r-track"><i class="r-dot" style="left: 36.4%"></i></span><span class="val">~60</span></div>
+              <div class="ratio-row"><span class="lbl">Jan 2026 peak</span><span class="r-track"><i class="r-dot" style="left: 10.9%"></i></span><span class="val">~46</span></div>
+              <div class="ratio-row"><span class="lbl">20 Nov 2026</span><span class="r-track"><i class="r-dot" style="left: 83.1%"></i></span><span class="val">85.7</span></div>
+            </div>
+            <div class="scale" style="grid-template-columns: minmax(7rem, 10rem) minmax(0,1fr) 3.4rem"><span></span><span class="ticks"><span style="left:0">40</span><span style="left:36.4%">60</span><span style="left:72.7%">80</span></span><span></span></div>
+            <p class="small">Dashed line: 2020–25 average of about 82. Silver's whole outperformance since 2025 is gone. Early values are <span class="flag calc">calc</span>; published January lows range 44.2–50 <span class="flag cf">conflict</span>. <a class="src" href="https://www.businesstoday.in/personal-finance/story/gold-silver-ratio-climbs-to-85-7-is-silver-now-relatively-cheaper-for-long-term-investors-568961-2026-11-23">BT/Choice</a></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 -->
+      <section id="causes" aria-labelledby="h-causes">
+        <div class="sec-head"><span class="sec-num">03 · Causes, ranked by evidence</span><h2 id="h-causes">The Fed's U-turn ranks first, and forced selling did the damage</h2></div>
+        <p class="lede">The ranking weighs three things: timing against the price falls, the reasons banks and the World Gold Council gave, and the counter-evidence. It is a judgement from that evidence. No source offered a formal breakdown of the whole fall.</p>
+
+        <ol class="causes">
+          <li class="cause">
+            <div class="cause-top">
+              <span class="rank">1</span>
+              <h3>The Fed swung from cuts to hikes, and real yields hit a 24-year high</h3>
+              <span class="meter"><span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Strongest evidence</span>
+            </div>
+            <div class="tiles">
+              <div class="tile"><span class="k">10-yr real yield (TIPS)</span><span class="v">1.72% → 2.95%</span><span class="d">27 Feb → 5 Oct</span></div>
+              <div class="tile"><span class="k">19 Nov TIPS auction</span><span class="v">2.903%</span><span class="d">Highest since Jul 2002</span></div>
+              <div class="tile"><span class="k">Fed funds rate</span><span class="v">3.75–4.00%</span><span class="d">After 16 Sep hike, 12–0 vote</span></div>
+              <div class="tile"><span class="k">December hike odds</span><span class="v">~97%</span><span class="d">Up from ~75% after the Oct meeting</span></div>
+            </div>
+            <ul>
+              <li>30 Jan: Trump named Kevin Warsh, read as hawkish and pro-dollar, and the "debasement trade" broke. Warsh was sworn in on 22 May <span class="flag one">1 source</span>.</li>
+              <li>17 Jun: Warsh's first meeting was a hawkish hold at 3.50–3.75%; 9 of 18 officials pencilled in a 2026 hike.</li>
+              <li>16 Sep: first hike since 2023, citing tariffs, the energy shock from the Iran war and AI capital spending <a class="src" href="https://www.kitco.com/news/article/2026-09-16/gold-price-drops-4310oz-fed-votes-12-0-favor-25-bps-rate-hike-16-18">Kitco</a>.</li>
+              <li>November: October CPI +0.4% m/m (about 4% y/y) on 10 Nov; minutes on 18 Nov said "almost all participants" saw more hikes; Governor Waller called a 50bp December hike "probably necessary" <a class="src" href="https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html">CNBC</a>.</li>
+              <li>Banks blamed this channel when they cut forecasts. JPMorgan saw "a sharp re-emergence of gold's sensitivity to real interest rates" <span class="flag vw">view</span>; Goldman cited a "hawkish Fed shift" <span class="flag vw">view</span>.</li>
+            </ul>
+            <p class="small"><strong>Why it matters:</strong> a US government bond now pays almost 3% above inflation with no risk. Gold pays nothing, so holding it costs more than at any time in 24 years. <a class="src" href="https://tipswatch.com/2026/11/19/10-year-tips-auction-gets-real-yield-of-2-903-highest-in-24-years/">TIPSWatch</a></p>
+            <p class="counter"><b>Against</b>WGC says falling yields supported gold in October; on 20 Nov the real yield fell 11bp while gold still fell 3–4%.</p>
+          </li>
+
+          <li class="cause">
+            <div class="cause-top">
+              <span class="rank">2</span>
+              <h3>Leverage and forced liquidation turned each Fed shock into a crash</h3>
+              <span class="meter"><span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>Strong for the sharpest days</span>
+            </div>
+            <ul>
+              <li>CME raised silver margins 13.6% in late December, again on 28 Jan (9% → 11%), and five times in nine days around the crash. Maintenance margins rose 33% for gold and 36% for silver from 2 Feb <a class="src" href="https://pro.stockalarm.io/blog/silver-crash-cme-margin-increase-2026">stockalarm</a>.</li>
+              <li>MCX: margins of 20% (gold) and 25% (silver) from 1 Feb plus extra margins on 5–6 Feb. ICICI Securities put effective silver margin at about <strong>72%</strong> and gold at 30% until 19 Feb <a class="src" href="https://www.businesstoday.in/markets/stocks/story/mcx-shares-additional-margin-on-gold-silver-futures-withdrawn-what-icici-sec-says-516865-2026-02-19">BT</a>.</li>
+              <li>March: a record <strong>$12bn</strong> gold-ETF outflow. WGC: investors were "selling what they could rather than what they wanted to be rid of".</li>
+              <li>November: margin calls in the AI-stock rout. Gold and the S&amp;P 500 each fell 8.8% from 30 Oct to 20 Nov. ING: "liquidation, not rates alone, was doing the damage" <span class="flag vw">view</span>.</li>
+              <li>CME raised margins again after the slide: gold 5% → 6%, silver 8% → 9% (reported 24 Nov) <span class="flag one">1 source</span>.</li>
+            </ul>
+            <p class="counter"><b>Against</b>Margin hikes mostly came after volatility rose. Gold speculative longs (102,942 contracts on 17 Nov) are 29% below the August peak but still near the five-year median, so the washout may not be complete.</p>
+          </li>
+
+          <li class="cause">
+            <div class="cause-top">
+              <span class="rank">3</span>
+              <h3>The Iran war hurt gold, because oil meant inflation and rate hikes</h3>
+              <span class="meter"><span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>Moderate to strong</span>
+            </div>
+            <ul>
+              <li>Gold fell 12% in March, the war's first full month, moving opposite to oil <a class="src" href="https://www.forbes.com/sites/conormurray/2026/04/08/gold-and-silver-hit-3-week-highs-after-us-iran-ceasefire-agreement/">Forbes</a>.</li>
+              <li>The 8 Apr US-Iran ceasefire lifted gold about 2% to $4,790, because fears of energy-driven inflation eased.</li>
+              <li>Central banks were net sellers of about 30t in March, led by Turkey and Russia, a monthly record for selling by value.</li>
+            </ul>
+            <p class="counter"><b>Against</b>One Indian view says falling oil and easing tensions in November moved money into equities <span class="flag vw">view</span>. In 2025, easing tensions (US-China truce, Ukraine talks) triggered 4.5–6% falls.</p>
+          </li>
+
+          <li class="cause">
+            <div class="cause-top">
+              <span class="rank">4</span>
+              <h3>A firmer dollar</h3>
+              <span class="meter"><span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>Moderate, secondary</span>
+            </div>
+            <ul>
+              <li>Dollar index from about 100.5 (June) to 103.41 on 13 Nov and 104.54 on 23 Nov, a 19–20-month high.</li>
+            </ul>
+            <p class="counter"><b>Against</b>That is about +3% against gold's −35%. On 24 Nov gold fell even as the dollar eased.</p>
+          </li>
+
+          <li class="cause">
+            <div class="cause-top">
+              <span class="rank">5</span>
+              <h3>Jewellery and coin buyers left before the crash</h3>
+              <span class="meter"><span class="pips" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></span>Weak as a trigger; removed a cushion</span>
+            </div>
+            <ul>
+              <li>WGC Q3 2026: global jewellery −17% to 313t; bars and coins −19% to 268t <a class="src" href="https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q3-2026">WGC</a>.</li>
+              <li>China's Q1 jewellery demand −32% after a VAT exemption ended on 1 Nov 2025; India's Q3 demand −29%.</li>
+            </ul>
+            <p class="counter"><b>Against</b>Total global demand fell only 1% in Q3, because ETFs (+211t) and central banks took up the slack. Indian buyers came back as prices fell.</p>
+          </li>
+        </ol>
+
+        <div class="grid2">
+          <div class="panel">
+            <div class="panel-label">Not a cause: central banks</div>
+            <p>Central banks bought <strong>321t in Q3 2026, up 42%</strong>, against a five-year quarterly average of 227t. China's central bank added 25.8t in October, its 24th straight month. RBI held at 880.52t and denied a report that it sold $12bn of gold. Goldman calls central-bank buying of about 60t a month the main support for the price <span class="flag vw">view</span>. <a class="src" href="https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q3-2026/central-banks">WGC</a></p>
+          </div>
+          <div class="panel">
+            <div class="panel-label">Unproven: India's "buying strike"</div>
+            <p>PM Modi said Indians who followed his 10 May appeal "saved money", and Piyush Goyal said "Indians influenced global gold prices" <span class="flag vw">government claim</span>. India's October imports did fall 62.6%. But the big falls line up with Fed dates, and global demand barely moved. The evidence does not show India moved the world price. <a class="src" href="https://www.theweek.in/news/india/2026/11/21/pm-modi-advice-gold-price-crash.html">The Week</a></p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-label">Where analysts disagree</div>
+          <ul class="facts">
+            <li><strong>What drove November.</strong> ING and Peter Schiff point to liquidation and margin calls; Goldman, JPMorgan and Modern Diplomacy point to the Fed and real rates.</li>
+            <li><strong>What drove October.</strong> WGC's model says yields supported gold, so it blames "asset rotation, de-grossing and Fed rate-path repricing".</li>
+            <li><strong>Is the bottom close?</strong> UBS calls the sell-off "positioning-led, not structural"; WGC says gold "may be nearing an interim bottom". Goldman warns ETF holders could give up below $3,890 (spot is already below it); Saxo's Ole Hansen says the sell-off "may not be over".</li>
+            <li><strong>Silver on 30 Jan.</strong> Some blame Warsh and the dollar, others CME margin mechanics.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 04 -->
+      <section id="silver" aria-labelledby="h-silver">
+        <div class="sec-head"><span class="sec-num">04 · Silver</span><h2 id="h-silver">Silver fell twice as far because its shortage story collapsed</h2></div>
+        <p class="lede">From 30 Oct to 20 Nov silver fell <strong>15.4%, exactly as much as copper</strong>, while gold fell 8.8%. In this leg silver traded like an industrial metal, not like money. <a class="src" href="https://www.bullionvault.com/gold-news/gold-price-news/gold-silver-crash-rally-112320261">BullionVault</a></p>
+        <div class="grid2">
+          <div class="block">
+            <h3>The shortage premium disappeared</h3>
+            <p>In October 2025 London ran short of free silver: one-month lease rates hit about 39% against a normal level below 1%, after about 225 Moz moved to New York vaults on tariff fears. Lease rates were back to 2–3% by mid-Q1 2026. By end-September London held <strong>932 Moz, the most in nearly four years</strong>. <a class="src" href="https://www.kitco.com/news/article/2026-10-29/silver-could-see-further-losses-against-gold-physical-market-weakens-metals">Kitco</a></p>
+          </div>
+          <div class="block">
+            <h3>The tariff premium came out</h3>
+            <p>Silver joined the US Critical Minerals List on 7 Nov 2025, opening the door to Section 232 tariffs. On 14–15 Jan 2026 Trump held off on tariffs, and silver fell more than 7% from above $93 in a day. The outcome of the review window that ended around 13 Jul is <span class="flag cf">unconfirmed</span>. <a class="src" href="https://think.ing.com/articles/trump-puts-silver-tariffs-on-hold">ING</a></p>
+          </div>
+          <div class="block">
+            <h3>High prices destroyed demand</h3>
+            <p>The Silver Institute cut its 2026 deficit forecast from 46.3 Moz (April) to <strong>35 Moz (12 Nov), the narrowest in six years</strong>. Total demand −5% to 1.08bn oz. Solar use is forecast to fall about 19% to roughly 151 Moz as makers use less silver per panel and switch to copper. Non-solar industrial demand still rose 4.5% to 492 Moz. <a class="src" href="https://silverinstitute.org/silver-market-set-for-sixth-consecutive-annual-deficit-in-2026/">Silver Institute</a></p>
+          </div>
+          <div class="block">
+            <h3>Speculators left</h3>
+            <p>On 30 Jan the largest silver ETF (SLV) lost 31% and leveraged silver ETFs more than 60%. Global silver ETF holdings fell 55 Moz in 2026. Mint coin sales fell more than 80% from Q1 to Q2. COMEX speculative net longs were down to about <strong>1,280 contracts</strong> on 17 Nov, so speculators have almost fully left. <a class="src" href="https://businessquant.com/economic-data/cotsilvermm">Business Quant</a></p>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-label">India's own silver twist</div>
+          <p>From about 16 May, silver imports moved from "Free" to "Restricted", and May imports fell about 94% <span class="flag cf">conflict on tonnes</span>. Domestic premiums hit a six-month high by July. On 23 Oct the government approved 6,500t of imports over six months, removing that scarcity premium; Indian silver ETFs fell about 4% that day <span class="flag one">1 source</span>. MCX silver slid from ₹1,79,132/kg at end-October to ₹1,48,900 on 21 Nov.</p>
+        </div>
+        <p class="small"><strong>2027 is disputed.</strong> Metals Focus expects a physical surplus in 2027; Bank of America expects a deficit <span class="flag vw">views</span>. A 35 Moz deficit is only about 3% of demand, and existing stockpiles cover it <span class="flag calc">calc</span>.</p>
+      </section>
+
+      <!-- 05 -->
+      <section id="india" aria-labelledby="h-india">
+        <div class="sec-head"><span class="sec-num">05 · India</span><h2 id="h-india">A 15% import duty cushioned Indian prices, and policy can take that away</h2></div>
+        <p class="lede">Indian prices peaked the same day as world prices, 29 Jan 2026, when MCX gold hit ₹1,80,501 per 10 g and MCX silver crossed ₹4 lakh per kg for the first time. Since then rupee prices have fallen less than dollar prices.</p>
+
+        <figure>
+          <div class="panel">
+            <div class="panel-label">Fall from the 29 Jan 2026 peak to 20 Nov 2026</div>
+            <div class="bars">
+              <div class="bar-group"><span class="swatch gold"></span>Gold</div>
+              <div class="bar-row" data-tip="Gold spot: $5,589.38 → $3,513.54 (−37.1%)" tabindex="0"><span class="lbl">Spot, US$</span><span class="track"><span class="fill gold" style="width: 53.0%"></span></span><span class="val">−37.1%</span></div>
+              <div class="bar-row" data-tip="MCX gold: ₹1,80,501 → ₹1,21,778 per 10 g (−32.5%). Peak not confirmed by MCX." tabindex="0"><span class="lbl">MCX, ₹/10 g</span><span class="track"><span class="fill gold" style="width: 46.4%"></span></span><span class="val">−32.5%</span></div>
+              <div class="bar-row" data-tip="IBJA 24K gold: ₹1,75,340 → ₹1,23,893 per 10 g (−29.3%)" tabindex="0"><span class="lbl">IBJA 24K, ₹/10 g</span><span class="track"><span class="fill gold" style="width: 41.9%"></span></span><span class="val">−29.3%</span></div>
+              <div class="bar-group"><span class="swatch silver"></span>Silver</div>
+              <div class="bar-row" data-tip="Silver spot: $121.64 → $41.12 (−66.2%)" tabindex="0"><span class="lbl">Spot, US$</span><span class="track"><span class="fill silver" style="width: 94.6%"></span></span><span class="val">−66.2%</span></div>
+              <div class="bar-row" data-tip="MCX silver: ₹4,07,456 → ₹1,47,813 per kg (−63.7%); −64.8% if the peak was ₹4,20,048" tabindex="0"><span class="lbl">MCX, ₹/kg</span><span class="track"><span class="fill silver" style="width: 91.0%"></span></span><span class="val">−63.7%</span></div>
+              <div class="bar-row" data-tip="IBJA silver 999: ₹3,79,988 → ₹1,52,531 per kg (−59.9%). Peak from 1 source." tabindex="0"><span class="lbl">IBJA 999, ₹/kg</span><span class="track"><span class="fill silver" style="width: 85.6%"></span></span><span class="val">−59.9%</span></div>
+              <div class="scale"><span></span><span class="ticks"><span style="left:0">0%</span><span style="left:28.57%">−20%</span><span style="left:57.14%">−40%</span><span style="left:85.71%">−60%</span></span><span></span></div>
+            </div>
+          </div>
+          <figcaption>Rupee benchmarks exclude 3% GST and making charges. MCX silver peak is disputed (₹4,07,456 vs ₹4,20,048, probably different contract months). All percentages calculated from cited prices.</figcaption>
+        </figure>
+
+        <div class="table-wrap">
+          <table class="t-wide">
+            <caption>IBJA bases: ₹1,33,195 gold and ₹2,30,420 silver on 31 Dec 2025; ₹76,640 and ₹87,420 on 31 Dec 2024. MCX's morning session on 24 Nov was closed for Guru Nanak Jayanti.</caption>
+            <thead><tr><th>Benchmark</th><th>Peak, 29 Jan</th><th>20 Nov</th><th>23–24 Nov</th><th>From peak</th><th>2026</th><th>Since end-2024</th></tr></thead>
+            <tbody>
+              <tr><td>MCX gold, ₹/10 g</td><td class="num">₹1,80,501 <span class="flag cf">₹1.84L also reported</span></td><td class="num">₹1,21,778 <span class="flag cf">₹1,22,561</span></td><td class="num">~₹1,22,508 <span class="flag one">1 source</span></td><td class="num neg">−32.5%</td><td class="num">n/a</td><td class="num">n/a</td></tr>
+              <tr><td>MCX silver, ₹/kg</td><td class="num">₹4,07,456 <span class="flag cf">₹4,20,048</span></td><td class="num">₹1,47,813</td><td class="num">~₹1,50,969 <span class="flag one">1 source</span></td><td class="num neg">−63.7%</td><td class="num">n/a</td><td class="num">n/a</td></tr>
+              <tr><td>IBJA 24K gold, ₹/10 g</td><td class="num">₹1,75,340</td><td class="num">₹1,23,893</td><td class="num">No official rate found</td><td class="num neg">−29.3%</td><td class="num neg">−7.0%</td><td class="num pos">+61.7%</td></tr>
+              <tr><td>IBJA silver 999, ₹/kg</td><td class="num">₹3,79,988 <span class="flag one">1 source</span></td><td class="num">₹1,52,531</td><td class="num">—</td><td class="num neg">−59.9%</td><td class="num neg">−33.8%</td><td class="num pos">+74.5%</td></tr>
+              <tr><td>USD/INR</td><td class="num">Above 92</td><td class="num">92.62</td><td class="num">—</td><td class="num">About flat</td><td class="num">~3% weaker</td><td class="num">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid2">
+          <div class="panel">
+            <div class="panel-label">The duty, not the rupee, explains most of the gap</div>
+            <p>On <strong>13 May 2026</strong> India raised the import duty on gold and silver from 6% to 15%: basic customs duty 5% → 10% and the agriculture cess (AIDC) 1% → 5%, with 3% IGST on top. It came three days after PM Modi asked Indians to stop buying gold for a year to protect forex reserves. MCX gold jumped 7.2% that day. <a class="src" href="https://www.cnbc.com/2026/05/13/india-hikes-bullion-import-duties-to-arrest-rupee-slide.html">CNBC</a> <a class="src" href="https://taxguru.in/custom-duty/customs-duty-gold-silver-raised-15-percent-effective-13-may-2026.html">TaxGuru</a></p>
+            <div class="math" aria-label="Duty arithmetic">
+              <span class="eq">Hike:     1.15 ÷ 1.06 = 1.085 → <b>+8.5%</b> on landed cost</span>
+              <span class="eq">Rollback: 1.06 ÷ 1.15 = 0.922 → <b>−7.8%</b> overnight</span>
+            </div>
+            <p class="small">The rupee was just above 92 on 29 Jan and 92.62 on 20 Nov, so it explains little of the gap since the peak. The duty hike also revived smuggling: dealers told Reuters illegal imports could exceed 100t in 2026, against 20.4t in 2025.</p>
+          </div>
+          <div class="panel">
+            <div class="panel-label">The rupee helped in 2025 and hurt in the crash week</div>
+            <div class="table-wrap" style="border:0">
+              <table>
+                <tbody>
+                  <tr><td class="num">End-2025</td><td class="num">89.88</td><td class="small">Down ~5% in 2025, Asia's worst currency</td></tr>
+                  <tr><td class="num">May 2026</td><td class="num">96.97</td><td class="small">Record low during the oil shock</td></tr>
+                  <tr><td class="num">7 Oct</td><td class="num">5.50%</td><td class="small">RBI repo hike of 25bp</td></tr>
+                  <tr><td class="num">13 Nov</td><td class="num">94.19</td><td class="small">Before the foreign-equity inflow</td></tr>
+                  <tr><td class="num">20 Nov</td><td class="num">92.62</td><td class="small">Fifth straight gain</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small">The rupee's 1.7% rally in the crash week added roughly 1.5–2 points to MCX gold's weekly fall of about 11% <span class="flag calc">calc</span>. People who bought between May and October lost twice: they paid the highest duty, and then the rupee strengthened against them.</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-label">Demand: fewer tonnes, record spending</div>
+          <div class="tiles">
+            <div class="tile"><span class="k">WGC India Q3 2026</span><span class="v">162.5t</span><span class="d">−29%; bars and coins −40%</span></div>
+            <div class="tile"><span class="k">2026 India forecast</span><span class="v">625–675t</span><span class="d">Possibly a six-year low</span></div>
+            <div class="tile"><span class="k">Dhanteras, 6 Nov</span><span class="v">₹60,000 cr</span><span class="d">Value +15–20%, volume flat (GJC)</span></div>
+            <div class="tile"><span class="k">Oct gold imports</span><span class="v">$5.51bn</span><span class="d">−62.6% y/y; 3× September</span></div>
+            <div class="tile"><span class="k">Dealer discount</span><span class="v">$207 → $5</span><span class="d">Record 13 May → 12 Nov</span></div>
+          </div>
+          <p class="small">Q2 value hit a record ₹1,98,100 crore even as tonnes fell 6%. Lower prices are drawing wedding-season buyers back in Rajkot and Delhi, which should soften further falls but is not a floor. <a class="src" href="https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-india-focus-q3-2026">WGC</a> <a class="src" href="https://www.gold.org/goldhub/gold-focus/2026/11/india-gold-market-update-gold-demand-gets-festive-boost">WGC India</a></p>
+        </div>
+
+        <figure>
+          <div class="panel">
+            <div class="panel-label">Where each gold buyer stands on 20 Nov (IBJA 24K ₹1,23,893 / 10 g)</div>
+            <div class="bars" style="--zero: 36.36%">
+              <div class="div-row" tabindex="0" data-tip="Bought at ₹76,640 (31 Dec 2024)"><span class="lbl">End-2024<small>₹76,640</small></span><span class="div-track" style="--zero: 36.36%"><span class="fill pos" style="left: 36.36%; width: 56.09%"></span></span><span class="val pos">+61.7%</span></div>
+              <div class="div-row" tabindex="0" data-tip="Bought at ₹1,30,874 (Dhanteras, 18 Oct 2025)"><span class="lbl">Dhanteras 2025<small>₹1,30,874</small></span><span class="div-track" style="--zero: 36.36%"><span class="fill neg" style="left: 31.55%; width: 4.82%"></span></span><span class="val neg">−5.3%</span></div>
+              <div class="div-row" tabindex="0" data-tip="Bought at ₹1,33,195 (31 Dec 2025)"><span class="lbl">Start of 2026<small>₹1,33,195</small></span><span class="div-track" style="--zero: 36.36%"><span class="fill neg" style="left: 30.00%; width: 6.36%"></span></span><span class="val neg">−7.0%</span></div>
+              <div class="div-row" tabindex="0" data-tip="Bought at about ₹1.50 lakh (end-September 2026)"><span class="lbl">End-Sep 2026<small>~₹1,50,000</small></span><span class="div-track" style="--zero: 36.36%"><span class="fill neg" style="left: 20.91%; width: 15.45%"></span></span><span class="val neg">~−17%</span></div>
+              <div class="div-row" tabindex="0" data-tip="Bought at ₹1,75,340 (29 Jan 2026 peak)"><span class="lbl">Jan 2026 peak<small>₹1,75,340</small></span><span class="div-track" style="--zero: 36.36%"><span class="fill neg" style="left: 9.73%; width: 26.64%"></span></span><span class="val neg">−29.3%</span></div>
+            </div>
+          </div>
+          <figcaption>Calculated from IBJA rates. Jewellery buyers are worse off than shown: they also paid 3% GST and 8–25% making charges, which are not recovered on resale. For 2020–21 SGB Series VIII, RBI's redemption price of ₹13,499 against a ₹5,127 issue price is <strong>+163%</strong>, plus 2.5% a year in interest.</figcaption>
+        </figure>
+      </section>
+
+      <!-- 06 -->
+      <section id="losses" aria-labelledby="h-losses">
+        <div class="sec-head"><span class="sec-num">06 · Pressure points</span><h2 id="h-losses">2026 ETF buyers, gold-loan borrowers and MCX traders carry India's losses</h2></div>
+        <div class="grid2">
+          <div class="block">
+            <h3>Retail money bought the top</h3>
+            <p>Gold ETFs took in a record <strong>₹24,040 crore in January 2026</strong>, the first month gold ETF inflows beat equity-fund inflows. May saw the first outflow in over a year (about ₹725 crore). Inflows resumed: ₹4,450.61 crore in September, ₹3,474.03 crore in October, about ₹49,399 crore for January–October. Folios reached 1.27 crore, up from 1.02 crore in December 2025. More Indians are sitting on gold losses than in any earlier correction <span class="flag calc">inference</span>. <a class="src" href="https://www.venturasecurities.com/news/mutual-funds/amfi-data-2026-gold-rush-moment-as-gold-etf-inflows-surpass-equity-mutual-fund-inflows-in-january-for-the-first-time/">Ventura</a> <a class="src" href="https://www.amfiindia.com/uploads/AMFI_Monthly_Note_October2026_cd03bc1103.pdf">AMFI</a></p>
+          </div>
+          <div class="block">
+            <h3>New money into gold FoFs was stopped</h3>
+            <p>From about 15–16 Oct, around 17 fund houses (including HDFC, ICICI Prudential, Tata, Invesco and Kotak) stopped fresh lump sums, new SIPs/STPs and switch-ins to gold ETF fund-of-funds. Existing SIPs continue; exchange-traded ETFs were not restricted. Reports link it to rupee pressure. Silver ETFs took in ₹3,092 crore in October while their assets fell 14%. <a class="src" href="https://upstox.com/news/personal-finance/mutual-funds/gold-fund-si-ps-and-st-ps-suspended-what-icici-prudential-hdfc-tata-invesco-mf-and-others-said/article-202078/">Upstox</a></p>
+          </div>
+          <div class="block">
+            <h3>Gold loans are the hidden pressure point</h3>
+            <p>Outstanding gold loans were about <strong>₹3.74 trillion in September 2026, up 60–66%</strong> <span class="flag one">secondary</span>. RBI rules from 1 Apr cap LTV at 85% (up to ₹2.5 lakh), 80% (₹2.5–5 lakh) and 75% (above ₹5 lakh), and limit bullet loans to 12 months. Muthoot's Stage 2 loans jumped to about ₹23,467 crore from ₹1,876 crore; both Muthoot and Manappuram fell about 5% on 18 Nov. <a class="src" href="https://indiafintech.substack.com/p/how-india-lends-q2-fy27-the-monthly">India Fintech</a></p>
+            <div class="math">
+              <span class="eq">Loan at 85% LTV, gold falls 15%:</span>
+              <span class="eq">0.85 ÷ (1 − 0.15) = <b>100% LTV</b></span>
+              <span class="eq">IBJA, end-Sep → 20 Nov: about <b>−17%</b></span>
+            </div>
+          </div>
+          <div class="block">
+            <h3>SGBs show long-term holders are still winning</h3>
+            <p>No new Sovereign Gold Bond since February 2024. RBI set ₹12,612 for the 25 Nov early redemption of 2021-22 Series I, about <strong>+167%</strong>. That is 6.6% below the ₹13,499 set one week earlier for Series VIII, so the crash week shows up in one number. Secondary sources say that from 1 Apr 2026 the tax exemption at maturity applies only to original subscribers <span class="flag cf">unverified vs Finance Act</span>. <a class="src" href="https://www.angelone.in/news/personal-finance/sgb-2021-22-series-i-delivers-166-81-return-as-rbi-opens-premature-redemption-on-november-25-2026">Angel One</a></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 -->
+      <section id="outlook" aria-labelledby="h-outlook">
+        <div class="sec-head"><span class="sec-num">07 · Outlook</span><h2 id="h-outlook">Three scenarios for end-2027, and none brings back silver's record</h2></div>
+        <p class="lede">Banks cut their forecasts sharply, but almost all still sit above today's price. Treat them as views with a poor 2026 track record: Goldman's end-2027 target fell from $5,400 to $4,650 within weeks.</p>
+        <div class="table-wrap">
+          <table class="t-wide">
+            <caption>Rupee conversions assume today's MCX multipliers: about ₹34.3 per 10 g for each $1/oz of gold (rupee ~92.7, 15% duty) and about ₹3,600 per kg for each $1/oz of silver. A duty cut to 6% alone would lower every rupee figure by about 7.8%.</caption>
+            <thead><tr><th>End-2027</th><th>Gold $/oz</th><th>≈ MCX gold</th><th>Silver $/oz</th><th>≈ MCX silver</th><th>Who holds this view</th><th>What would have to happen</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Bear</strong></td><td class="num">$3,400–3,500</td><td class="num">₹1.17–1.20 lakh</td><td class="num">~$40</td><td class="num">~₹1.44 lakh</td><td>Motilal Oswal floor $3,400–3,450, silver support ~$40; BofA ~$3,500 average if oil hits $150 <span class="flag vw">views</span></td><td>Fed keeps hiking into 2027; strong dollar; ETF holders capitulate; another oil spike</td></tr>
+              <tr><td><strong>Base</strong></td><td class="num">$4,500–4,800</td><td class="num">₹1.54–1.65 lakh</td><td class="num">$60–75</td><td class="num">₹2.2–2.7 lakh</td><td>Goldman $4,650; JPMorgan ~$4,500 <span class="flag cf">older note $6,300</span>; HSBC avg $4,825; Motilal $4,500–4,700. Silver: Reuters poll $66.75, BofA $70</td><td>Hikes end in H1 2027; central banks keep buying ~60t a month</td></tr>
+              <tr><td><strong>Bull</strong></td><td class="num">$5,000–6,000</td><td class="num">₹1.72–2.06 lakh</td><td class="num">$84–90+</td><td class="num">₹3.0–3.2 lakh</td><td>UBS $5,000 by Dec 2027; Metals Focus record gold and silver avg $84.40; Morgan Stanley $5,250 <span class="flag one">1 source</span></td><td>Fed turns to cuts; weaker dollar; Western ETF buying returns; a shock that does not bring hikes</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small">Even the bull case for silver is far below $121.64, so someone who bought near the January top should not expect to break even in 2027. Metals Focus pairs its $84 average with a 2027 physical <em>surplus</em>, so its bull case depends on investors buying, not on a shortage. <a class="src" href="https://www.kitco.com/opinion/2026-11-05/why-silver-price-case-now-rests-investors">Kitco</a></p>
+
+        <figure>
+          <div class="panel">
+            <div class="panel-label">Past crashes for scale: peak-to-trough fall</div>
+            <div class="bars">
+              <div class="bar-group"><span class="swatch gold"></span>Gold</div>
+              <div class="bar-row"><span class="lbl">1980 peak (about)<br><small class="muted">below peak for ~2 decades</small></span><span class="track"><span class="fill gold" style="width: 100%"></span></span><span class="val">−70%</span></div>
+              <div class="bar-row"><span class="lbl">2011–15<br><small class="muted">~9 years to regain high</small></span><span class="track"><span class="fill gold" style="width: 64.3%"></span></span><span class="val">−45%</span></div>
+              <div class="bar-row"><span class="lbl">2013 in US$<br><small class="muted">only about −3% in rupees</small></span><span class="track"><span class="fill gold" style="width: 40%"></span></span><span class="val">−28%</span></div>
+              <div class="bar-row"><span class="lbl"><strong>2026 so far</strong></span><span class="track"><span class="fill gold now" style="width: 53.0%"></span></span><span class="val">−37%</span></div>
+              <div class="bar-group"><span class="swatch silver"></span>Silver</div>
+              <div class="bar-row"><span class="lbl">1980 peak (about)<br><small class="muted">regained only in 2011</small></span><span class="track"><span class="fill silver" style="width: 100%"></span></span><span class="val">−75%</span></div>
+              <div class="bar-row"><span class="lbl">2011–15<br><small class="muted">$49.51 → $13.71</small></span><span class="track"><span class="fill silver" style="width: 100%"></span></span><span class="val">−72%</span></div>
+              <div class="bar-row"><span class="lbl"><strong>2026 so far</strong></span><span class="track"><span class="fill silver now" style="width: 94.6%"></span></span><span class="val">−66%</span></div>
+              <div class="scale"><span></span><span class="ticks"><span style="left:0">0%</span><span style="left:28.57%">−20%</span><span style="left:57.14%">−40%</span><span style="left:85.71%">−60%</span></span><span></span></div>
+            </div>
+          </div>
+          <figcaption>Scale ends at −70%; silver's 1980 and 2011 falls run past it. Silver 1980 fall is disputed (Kitco says about −90%) <span class="flag cf">conflict</span>. 2013 rupee figure: <a class="src" href="https://www.business-standard.com/article/markets/gold-prices-finally-fell-in-2013-113122500530_1.html">Business Standard</a>. Gold's 2026 fall already approaches 2011–15; the big difference from 2013 is record central-bank buying.</figcaption>
+        </figure>
+      </section>
+
+      <!-- 08 -->
+      <section id="playbook" aria-labelledby="h-playbook">
+        <div class="sec-head"><span class="sec-num">08 · Playbook</span><h2 id="h-playbook">Set a target allocation, buy in stages, avoid leverage</h2></div>
+        <p class="lede">This is general evidence, not personal advice. Anyone with specific needs should speak to a SEBI-registered investment adviser. Two reasons to hold some gold survived the crash: central banks are buying at a record pace, and a falling rupee has cushioned Indian buyers in past slumps.</p>
+        <ul class="principles">
+          <li><b>Target allocation</b><span>Gold 5–10% (up to 15%); silver 0–3%</span></li>
+          <li><b>Buy in stages</b><span>Monthly SIPs or pre-set price steps</span></li>
+          <li><b>No leverage</b><span>Margins rise exactly when prices fall</span></li>
+          <li><b>Regulated, low-cost</b><span>ETFs, FoFs, multi-asset funds</span></li>
+          <li><b>Tax before selling</b><span>Short-term gains taxed at slab rate</span></li>
+        </ul>
+
+        <div class="panel">
+          <div class="panel-label">How the professionals are buying</div>
+          <p>DSP's Multi Asset Omni FoF held about 10% gold and no silver against a 20% benchmark weight in the two metals. On 18 Nov it said it would add 0.5% to gold from around $3,850, and 0.5% to silver from just below $47 and at every further $2 fall. It calls gold 15% and silver 28% below fair value <span class="flag vw">view</span>. Motilal Oswal advises gradual buying in the $3,800–3,900 zone <span class="flag vw">view</span>. The same fund house was "cautious on gold, bullish on silver" in October 2025, the opposite of what happened, so treat fund-house calls as views. <a class="src" href="https://www.businesstoday.in/personal-finance/story/gold-at-15-discount-silver-at-28-dsp-mutual-fund-explains-why-it-is-buying-precious-metals-now-568288-2026-11-19">BT</a> <a class="src" href="https://www.tradingview.com/news/cnbctv:8d0d667dc094b:0/">CNBC-TV18</a></p>
+          <p class="small">Before deciding you are under-allocated, count the jewellery you already own. Rebalance once a year in both directions: trim after rallies, top up after falls.</p>
+        </div>
+
+        <h3>What each kind of investor can reasonably do</h3>
+        <div class="who">
+          <div class="who-row"><h3>2026 buyer of gold ETFs or FoFs, now down 20–35%</h3><div><p class="do">Do not sell in a panic. If gold is still within your target range, keep existing SIPs running.</p><p class="why">Selling locks in the loss. The rupee and the duty already softened the fall, and most 2027 base cases sit above today's price <span class="flag vw">view</span>.</p></div></div>
+          <div class="who-row"><h3>Long-term holder in profit (pre-2025, 2020–21 SGBs)</h3><div><p class="do">Stick to the plan. Trim only if gold has grown well above your target range.</p><p class="why">IBJA gold is still up about 62% since end-2024; SGB redemption prices are up 163–167%.</p></div></div>
+          <div class="who-row"><h3>Below target, with a long horizon</h3><div><p class="do">Build up over several months through monthly SIPs or pre-set price steps, using an ETF, FoF or multi-asset fund.</p><p class="why">In 2011–15 a first fall of 30% became 45%. DSP and Motilal both describe buying in stages.</p></div></div>
+          <div class="who-row"><h3>Buying for a wedding</h3><div><p class="do">Buy what you need, in parts across the season, and check the 6-digit HUID on the BIS CARE app.</p><p class="why">Making charges of 8–25% plus 3% GST are lost on resale, so jewellery is consumption, not investment.</p></div></div>
+          <div class="who-row"><h3>Holding silver bought near the top</h3><div><p class="do">Treat it as a long-term, high-risk position. Size it so a further 30–40% fall would not change your plans; do not add beyond a small tactical share.</p><p class="why">Even bullish 2027 forecasts ($84–90) are far below $121.64. Silver fell 39% in the 13 weeks to 24 Nov.</p></div></div>
+          <div class="who-row"><h3>Leveraged MCX trader</h3><div><p class="do">Reduce position size and keep cash for margin hikes.</p><p class="why">Exchanges raised margins during the falls, in January–February and again in November.</p></div></div>
+          <div class="who-row"><h3>Gold-loan borrower at high LTV</h3><div><p class="do">Check your current LTV now. Keep cash ready for a top-up or part-payment. Avoid bullet loans you cannot repay within 12 months.</p><p class="why">An 85% LTV loan reaches 100% after a ~15% fall; RBI is reportedly monitoring loans above 100% LTV.</p></div></div>
+          <div class="who-row"><h3>Digital-gold app user</h3><div><p class="do">Consider moving larger sums into ETFs or Electronic Gold Receipts (EGRs).</p><p class="why">SEBI's 8 Nov 2025 press release says digital gold is not a security and is outside its regulation.</p></div></div>
+        </div>
+
+        <h3>Products and tax (FY2026-27)</h3>
+        <div class="table-wrap">
+          <table class="t-wide">
+            <thead><tr><th>Product</th><th>Suits</th><th>Costs</th><th>Long-term after</th><th>Tax</th><th>Main caution</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Gold or silver ETF</strong> (demat)</td><td>Long-term investors</td><td>Expense ratio ~0.3–0.8% + spread</td><td class="num">12 months</td><td>12.5% LTCG, no indexation; STCG at slab</td><td>Compare price with iNAV: silver ETFs traded 5–12% above value in Oct 2025</td></tr>
+              <tr><td><strong>Gold or silver FoF</strong></td><td>SIPs without demat</td><td>ETF cost + FoF fee</td><td class="num">24 months <span class="flag cf">sources differ</span></td><td>12.5%</td><td>~17 fund houses stopped new money into gold FoFs from mid-Oct; existing SIPs continue</td></tr>
+              <tr><td><strong>Multi-asset fund</strong></td><td>Hands-off investors</td><td>Fund expense ratio</td><td>Depends on structure</td><td>—</td><td>ICICI Pru Multi-Asset held ~10% gold, 0% silver</td></tr>
+              <tr><td><strong>SGB on the exchange</strong></td><td>Existing holders; selective buyers</td><td>Thin trading</td><td class="num">12 months</td><td>12.5% even at maturity for exchange buyers from 1 Apr 2026 <span class="flag cf">unverified</span></td><td>No new issue since Feb 2024</td></tr>
+              <tr><td><strong>Jewellery</strong></td><td>Weddings, personal use</td><td>8–25% making + 3% GST</td><td class="num">24 months</td><td>12.5%</td><td>Verify the HUID hallmark</td></tr>
+              <tr><td><strong>Coins and bars</strong></td><td>Small physical holdings</td><td>1–5% premium + 3% GST</td><td class="num">24 months</td><td>12.5%</td><td>Buyback spread</td></tr>
+              <tr><td><strong>Digital gold (apps)</strong></td><td>Avoid for meaningful sums</td><td>Platform spreads</td><td>Probably 24 months <span class="flag cf">unconfirmed</span></td><td>—</td><td>Not regulated by SEBI (PR 70/2025)</td></tr>
+              <tr><td><strong>MCX futures and options</strong></td><td>Traders only</td><td>Leverage, margin calls</td><td>Business income <span class="flag cf">unconfirmed</span></td><td>—</td><td>Effective silver margin hit ~72% in Feb 2026</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small"><strong>Get a chartered accountant to check three tax points before broadcast:</strong> whether short-term ETF losses can be set off against other gains; the Budget 2026 change to SGB taxation; and that the ₹1.25 lakh equity LTCG exemption does not apply to gold ETFs. Panic selling has a tax cost too: anyone who still has a gain within 12 months (ETF) or 24 months (FoF, physical) pays slab-rate tax on it.</p>
+
+        <h3>Mistakes the 2026 crash has already punished</h3>
+        <ol class="mistakes">
+          <li><strong>Selling in a panic at the low.</strong> It locks in a loss the rupee and duty already softened. Ask "am I above or below my target allocation?" instead.</li>
+          <li><strong>Averaging down with leverage on MCX.</strong> Margins went up exactly when prices fell, forcing traders out whatever their view.</li>
+          <li><strong>Buying the dip in one lump sum.</strong> History shows a 30% fall can become 45% and last for years.</li>
+          <li><strong>Overweighting silver because it "fell more".</strong> The bigger fall reflects bigger risk, and the shortage story behind it has weakened.</li>
+          <li><strong>Treating jewellery or app-based digital gold as an investment</strong>, and forgetting the jewellery you already own when sizing your gold holding.</li>
+          <li><strong>Trusting confident forecasts.</strong> In January ING said silver's "downside might be limited"; on 18 Nov a headline said silver had found "a $50 floor" with silver already near $45.</li>
+          <li><strong>Assuming the 15% duty is permanent</strong>, or buying SGBs on the exchange expecting a tax-free maturity.</li>
+          <li><strong>Borrowing against gold at maximum LTV near a price peak.</strong></li>
+        </ol>
+      </section>
+
+      <!-- 09 -->
+      <section id="watch" aria-labelledby="h-watch">
+        <div class="sec-head"><span class="sec-num">09 · Calendar</span><h2 id="h-watch">Signals to watch, with dates</h2></div>
+        <p class="lede">The next move depends on the US real yield, set by the 9 Dec Fed meeting, and on New Delhi's duty decision in the 1 Feb 2027 Budget.</p>
+        <div class="table-wrap">
+          <table class="t-wide">
+            <thead><tr><th>When</th><th>Signal</th><th>Bearish for metals</th><th>Bullish for metals</th></tr></thead>
+            <tbody>
+              <tr><td class="num">25 Nov <span class="flag cf">or 26 Nov</span></td><td>US PCE inflation</td><td>Hot reading raises December or 2027 hike odds</td><td>Soft reading cuts odds of a 50bp hike</td></tr>
+              <tr><td class="num">30 Nov, weekly</td><td>CFTC positioning (gold 102,942; silver ~1,280 on 17 Nov)</td><td>Gold speculative longs keep falling</td><td>Fresh buying from a washed-out base</td></tr>
+              <tr><td class="num">Early Dec</td><td>WGC November ETF flows</td><td>North American outflows spread</td><td>Inflows spread beyond Europe</td></tr>
+              <tr><td class="num"><strong>9 Dec</strong></td><td><strong>Fed decision</strong> (25bp hike ~97% priced)</td><td>50bp hike, or more 2027 hikes signalled</td><td>Hike paired with "done for now", or a pause</td></tr>
+              <tr><td class="num">~10 Dec</td><td>AMFI November data</td><td>Indian ETF outflows</td><td>Continued SIP-led inflows</td></tr>
+              <tr><td class="num">Mid-Dec</td><td>India's November trade data</td><td>Imports stay depressed</td><td>Wedding-season import recovery</td></tr>
+              <tr><td class="num">December</td><td>RBI policy meeting</td><td>Rupee strengthens (rupee gold falls more)</td><td>Rupee weakens (cushions rupee gold)</td></tr>
+              <tr><td class="num"><strong>1 Feb 2027</strong></td><td><strong>Union Budget: import duty</strong></td><td>Cut from 15% (rupee prices ~−7.8% overnight)</td><td>Duty unchanged</td></tr>
+              <tr><td class="num">Each quarter</td><td>WGC central-bank buying</td><td>Below the 2025 pace</td><td>Stays at 250–320t a quarter</td></tr>
+              <tr><td class="num">April 2027</td><td>World Silver Survey</td><td>2027 surplus confirmed</td><td>Deficit returns</td></tr>
+              <tr><td class="num">Daily</td><td>Dollar index, 10-yr TIPS yield, USD/INR</td><td>DXY new highs; TIPS above 2.95%; rupee strengthening</td><td>DXY turns down; TIPS falling; rupee weakening</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 10 -->
+      <section id="video" aria-labelledby="h-video">
+        <div class="sec-head"><span class="sec-num">10 · Production notes</span><h2 id="h-video">For the video</h2></div>
+        <p class="lede">A suggested running order, lines that carry the argument, claims to keep off camera, and the numbers to re-check on recording day.</p>
+
+        <h3>Suggested running order</h3>
+        <ol class="flow">
+          <li><h3>Hook: the paradox</h3><p class="line">“29 January ko sona $5,590 par tha, 20 November ko $3,514. Chandi $121 se $41. Aur March mein, jab Iran war chal raha tha, sona upar jaane ki jagah 12% gira.”</p><p class="show">Show: headline figures and the <a href="#fall">gold chart</a>.</p></li>
+          <li><h3>How far it fell</h3><p class="line">“Ye ek din ka crash nahi tha. Das mahine, chhe legs.”</p><p class="show">Show: the six-legs table; S&amp;P, Nasdaq and Bitcoin fell too while Nifty hit a nine-month high.</p></li>
+          <li><h3>Reason 1: the Fed and real yields</h3><p class="line">“Gold ka asli dushman real yield hai. Jab US bond bina risk ke inflation se 3% zyada de raha ho, toh sona rakhna mehnga pad jaata hai.”</p><p class="show">Show: the four Fed dates and the 2.903% TIPS auction.</p></li>
+          <li><h3>Reason 2: leverage</h3><p class="line">“Is baar gold hedge nahi bana. Margin call aaya, toh log tech stocks aur crypto ke saath gold bhi bech rahe the.”</p><p class="show">Show: CME's five margin hikes in nine days; MCX's 72% effective silver margin.</p></li>
+          <li><h3>Reasons 3–5, and what was not a cause</h3><p class="line">“War ka matlab tha mehnga tel, aur mehnge tel ka matlab tha aur rate hike. Central banks ne becha nahi, Q3 mein 321 ton khareeda.”</p><p class="show">Show: the ranked causes with their evidence meters.</p></li>
+          <li><h3>Why silver fell twice as hard</h3><p class="line">“Chandi ki kahani shortage ki thi. Shortage khatam hui, toh kahani bhi khatam.”</p><p class="show">Show: the four silver blocks and the gold-silver ratio back at 85.7.</p></li>
+          <li><h3>The India twist</h3><p class="line">“India mein girawat kam kyun dikhi? 13 May ko import duty 6% se 15% ho gayi. Budget mein duty wapas kam hui, toh rupee mein sona ek din mein lagbhag 8% sasta ho sakta hai.”</p><p class="show">Show: the global-vs-India bars, the duty arithmetic, and where each buyer stands.</p></li>
+          <li><h3>What to do now</h3><p class="line">“Panic mein mat becho. Udhaar par mat khareedo. Ek target allocation rakho, aur stages mein khareedo.”</p><p class="show">Show: the five principles and the investor-type list. Say the disclaimer.</p></li>
+          <li><h3>What to watch next</h3><p class="line">“9 December ko Fed ka faisla, aur 1 February ko Budget mein import duty. Yahi do tareekhein agla move tay karengi.”</p><p class="show">Show: the dates table.</p></li>
+        </ol>
+
+        <div class="grid2">
+          <div class="panel">
+            <div class="panel-label">Keep off camera</div>
+            <ul class="avoid">
+              <li><span>“MCX gold peaked at ₹1.84 lakh.”<span class="why">Unconfirmed. Use ₹1,80,501 and name the contract month after checking MCX data.</span></span></li>
+              <li><span>“India's buying strike crashed world gold.”<span class="why">A government claim; the price falls line up with Fed dates.</span></span></li>
+              <li><span>“Silver will be back at $120 in 2027.”<span class="why">No forecast in the research goes above about $90.</span></span></li>
+              <li><span>“SGBs bought on the exchange are tax-free at maturity.”<span class="why">Reportedly changed from 1 Apr 2026; verify against the Finance Act first.</span></span></li>
+              <li><span>“Gold always rises in a war.”<span class="why">2026 showed the opposite when war meant oil-led inflation.</span></span></li>
+              <li><span>Anything from the English video “Why Gold and Silver Just Crashed (The Real Reason)”.<span class="why">Posted around 18–19 Nov, before the 20 Nov low; its contents could not be checked. <a class="src" href="https://www.youtube.com/watch?v=RGM97CF4zSs">YouTube</a></span></span></li>
+            </ul>
+          </div>
+          <div class="panel">
+            <div class="panel-label">Disclaimer to read out</div>
+            <p>“Ye video education ke liye hai, investment advice nahi. Apni situation ke hisaab se faisla lene se pehle SEBI-registered adviser se baat karein.”</p>
+            <p class="small">On screen, name the basis for every price: spot or futures, intraday or closing, and the MCX contract month. 26 Nov is the US Thanksgiving holiday, so take "current" prices from a live MCX or IBJA screen.</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="row" style="justify-content: space-between">
+            <div class="panel-label">Re-check before recording</div>
+            <span class="progress" id="check-progress" aria-live="polite">0 of 20 checked</span>
+          </div>
+          <p class="small">These numbers rest on one source, conflict between sources, or will move before Thursday. Ticks are saved in this browser only.</p>
+          <ul class="checks" id="checks">
+            <li><label><input type="checkbox" id="c1"><span class="n">01</span><span class="what">Gold intraday record $5,589–5,602 (28–29 Jan)<span class="how">Time-zone and feed conflict · LBMA or a major dealer chart</span></span></label></li>
+            <li><label><input type="checkbox" id="c2"><span class="n">02</span><span class="what">Gold closing record $5,414.49 spot / ~$5,447 COMEX<span class="how">Spot figure from 1 source · COMEX settlement data</span></span></label></li>
+            <li><label><input type="checkbox" id="c3"><span class="n">03</span><span class="what">MCX gold peak ₹1,80,501<span class="how">No exchange confirmation; ₹1,84,000 also reported · MCX history, state contract month</span></span></label></li>
+            <li><label><input type="checkbox" id="c4"><span class="n">04</span><span class="what">MCX silver peak ₹4,07,456 vs ₹4,20,048<span class="how">Probably different contracts · MCX history</span></span></label></li>
+            <li><label><input type="checkbox" id="c5"><span class="n">05</span><span class="what">IBJA silver peak ₹3,79,988<span class="how">1 source · IBJA archive</span></span></label></li>
+            <li><label><input type="checkbox" id="c6"><span class="n">06</span><span class="what">Gold 20 Nov low $3,513.54<span class="how">Feeds show $3,502–3,525 · Reuters or LBMA</span></span></label></li>
+            <li><label><input type="checkbox" id="c7"><span class="n">07</span><span class="what">Silver low $41.12 (20 Nov) vs $40.76 (24 Nov)<span class="how">Feed and date conflict · live spot chart</span></span></label></li>
+            <li><label><input type="checkbox" id="c8"><span class="n">08</span><span class="what">MCX gold 20 Nov close ₹1,21,778<span class="how">₹1,22,561 also reported · MCX settlement</span></span></label></li>
+            <li><label><input type="checkbox" id="c9"><span class="n">09</span><span class="what">MCX ₹1,22,508 gold / ₹1,50,969 silver on 24 Nov<span class="how">1 source each; morning session closed · MCX settlement</span></span></label></li>
+            <li><label><input type="checkbox" id="c10"><span class="n">10</span><span class="what">IBJA 24K ₹1,23,893 (20 Nov); latest official rate<span class="how">No 23–24 Nov rate found · ibja.co</span></span></label></li>
+            <li><label><input type="checkbox" id="c11"><span class="n">11</span><span class="what">Mid-year trough ~$4,039 (16 Jul)<span class="how">$3,973.79 on 24 Jun also reported · price chart</span></span></label></li>
+            <li><label><input type="checkbox" id="c12"><span class="n">12</span><span class="what">March 2026 = worst month since June 2013<span class="how">CNBC and Benzinga say since 2008 · WGC monthly data</span></span></label></li>
+            <li><label><input type="checkbox" id="c13"><span class="n">13</span><span class="what">US 10-yr yield 4.92% (20 Nov)<span class="how">Indian reports say ~5.1% · FRED DGS10</span></span></label></li>
+            <li><label><input type="checkbox" id="c14"><span class="n">14</span><span class="what">Silver −39% in 13 weeks, worst since 2008<span class="how">1 source · price chart</span></span></label></li>
+            <li><label><input type="checkbox" id="c15"><span class="n">15</span><span class="what">CME November margin hike (gold 5%→6%, silver 8%→9%)<span class="how">1 source · CME notices</span></span></label></li>
+            <li><label><input type="checkbox" id="c16"><span class="n">16</span><span class="what">Gold loans ₹3.74 trn, +60–66%; RBI monitoring LTV above 100%<span class="how">Secondary sources · RBI sector data, Moneycontrol original</span></span></label></li>
+            <li><label><input type="checkbox" id="c17"><span class="n">17</span><span class="what">SGB tax-free maturity only for original subscribers<span class="how">Secondary sources · Finance Act 2026 / CBDT</span></span></label></li>
+            <li><label><input type="checkbox" id="c18"><span class="n">18</span><span class="what">6,500t silver import approval; silver ETFs −4% that day<span class="how">Effectively 1 source · DGFT notice, NSE prices</span></span></label></li>
+            <li><label><input type="checkbox" id="c19"><span class="n">19</span><span class="what">Budget 2026 left duty at 6%<span class="how">One claim of 5% · Budget documents / CBIC</span></span></label></li>
+            <li><label><input type="checkbox" id="c20"><span class="n">20</span><span class="what">December hike ~97% priced; PCE release date<span class="how">Will change after PCE · CME FedWatch, BEA calendar</span></span></label></li>
+          </ul>
+          <div class="row"><button class="btn ghost" type="button" id="reset-checks">Clear ticks</button></div>
+        </div>
+      </section>
+
+      <!-- 11 -->
+      <section id="method" aria-labelledby="h-method">
+        <div class="sec-head"><span class="sec-num">11 · Method</span><h2 id="h-method">Sources and method</h2></div>
+        <div class="prose">
+          <p>Five research threads ran in parallel on 24 Nov 2026: the price timeline (global and Indian benchmarks), global drivers of the gold fall, silver-specific drivers, the Indian market, and the investor playbook. Their notes were combined into one report, and this page is built from that report.</p>
+          <p><strong>Limitation:</strong> full pages could not be opened during research, so every figure comes from search-result summaries of the linked pages. Most headline numbers match across two or more summaries. Treat every number as "as reported" and check the ones in section 10 on recording day.</p>
+        </div>
+        <div class="legend-flags">
+          <span><span class="flag one">1 source</span> found in only one source</span>
+          <span><span class="flag cf">conflict</span> sources disagree; alternatives given</span>
+          <span><span class="flag calc">calc</span> arithmetic on cited figures, or an inference</span>
+          <span><span class="flag vw">view</span> an analyst's, official's or government's opinion or forecast</span>
+        </div>
+        <h3>All 224 sources, in order of first use</h3>
+        <ol class="sources">
+<li><a href="https://stonexbullion.com/en/blog/what-was-the-highest-price-for-gold/">StoneX Bullion</a> <span class="host">stonexbullion.com</span></li>
+<li><a href="https://www.cbsnews.com/news/highest-gold-price-in-history-how-its-changed-from-2025-to-2026/">CBS News</a> <span class="host">cbsnews.com</span></li>
+<li><a href="https://thepeninsulaqatar.com/article/31/01/2026/gold-prices-post-biggest-one-day-drop-in-four-decades">The Peninsula</a> <span class="host">thepeninsulaqatar.com</span></li>
+<li><a href="https://qna.org.qa/en/news/news-details?id=gold-prices-post-biggest-one-day-drop-in-four-decades&amp;date=31%2F01%2F2026">QNA</a> <span class="host">qna.org.qa</span></li>
+<li><a href="https://www.apmex.com/gold-price">APMEX</a> <span class="host">apmex.com</span></li>
+<li><a href="https://upstox.com/news/market-news/commodities/gold-and-silver-price-crash-why-precious-metals-witnessed-one-of-the-worst-corrections-in-decades-on-friday-january-30/article-188626/">conflict: the differences come from time zones and price feeds. COMEX futures touched about $5,626 ([Upstox</a> <span class="host">upstox.com</span></li>
+<li><a href="https://www.kitco.com/opinion/2026-01-28/gold-futures-shatter-records-largest-single-day-dollar-gain-history">Kitco</a> <span class="host">kitco.com</span></li>
+<li><a href="https://www.cmi-gold-silver.com/article/january-2026-spot-price-recap/">CMI</a> <span class="host">cmi-gold-silver.com</span></li>
+<li><a href="https://www.cnbc.com/2026/11/20/gold-federal-reserve-price-dollar-metals.html">CNBC/Reuters</a> <span class="host">cnbc.com</span></li>
+<li><a href="https://metalcharts.org/silver-all-time-high">Metalcharts</a> <span class="host">metalcharts.org</span></li>
+<li><a href="https://www.moneymetals.com/price/silver-price-all-time-high">Money Metals</a> <span class="host">moneymetals.com</span></li>
+<li><a href="https://goldprice.org/gold-price-today/2026-01-02">GoldPrice.org</a> <span class="host">goldprice.org</span></li>
+<li><a href="https://www.bullionvault.com/gold-news/gold-price-news/gold-silver-2025-record-price-123120251">BullionVault</a> <span class="host">bullionvault.com</span></li>
+<li><a href="https://www.riotimesonline.com/precious-metals-record-2025-golds-best-year-since-1979-silvers-historic-sprint/">Rio Times</a> <span class="host">riotimesonline.com</span></li>
+<li><a href="https://newzino.com/story/gold-safe-haven-2026">Newzino</a> <span class="host">newzino.com</span></li>
+<li><a href="https://www.businesstoday.in/personal-finance/investment/story/gold-and-silver-prices-drop-sharply-marking-biggest-decline-since-2013-and-2021-499097-2025-10-21">BusinessToday</a> <span class="host">businesstoday.in</span></li>
+<li><a href="https://www.financemagnates.com/trending/gold-declines-68-largest-single-day-drop-in-five-years/">Finance Magnates</a> <span class="host">financemagnates.com</span></li>
+<li><a href="https://silverinstitute.org/wp-content/uploads/2025/11/Silver-News-OCT2025.pdf">Silver Institute</a> <span class="host">silverinstitute.org</span></li>
+<li><a href="https://www.barchart.com/story/news/36238121/silver-stalled-was-the-recent-record-high-the-top">Barchart</a> <span class="host">barchart.com</span></li>
+<li><a href="https://www.kitco.com/opinion/2025-10-27/gold-retreats-below-4000-amid-easing-trade-tensions">Kitco</a> <span class="host">kitco.com</span></li>
+<li><a href="https://www.investing.com/news/commodities-news/gold-prices-tick-down-from-record-high-amid-profit-taking-silver-hits-new-peak-4423360">Investing.com</a> <span class="host">investing.com</span></li>
+<li><a href="https://www.mining.com/silver-price-tumbles-after-hitting-new-record-above-83/">MINING.COM</a> <span class="host">mining.com</span></li>
+<li><a href="https://m.washingtontimes.com/news/2025/dec/29/surging-silver-gold-slide-cme-raises-margin-requirements/">AP/Washington Times</a> <span class="host">m.washingtontimes.com</span></li>
+<li><a href="https://www.irishtimes.com/business/2026/02/02/gold-and-silver-extend-free-fall/">Irish Times</a> <span class="host">irishtimes.com</span></li>
+<li><a href="https://www.fool.com/investing/2026/02/03/worst-day-silver-46-years-warning-stock-ai-quantum/">Motley Fool</a> <span class="host">fool.com</span></li>
+<li><a href="https://www.cnbc.com/2026/01/30/silver-gold-fall-price-usd-dollar-fed-warsh-chair-trump-metals.html">CNBC</a> <span class="host">cnbc.com</span></li>
+<li><a href="https://pro.stockalarm.io/blog/silver-crash-cme-margin-increase-2026">stockalarm.io</a> <span class="host">pro.stockalarm.io</span></li>
+<li><a href="https://www.kitco.com/news/article/2026-04-08/dissecting-what-really-happened-and-what-didnt-during-golds-iran-war">Kitco/WGC</a> <span class="host">kitco.com</span></li>
+<li><a href="https://www.cnbc.com/2026/03/31/gold-on-track-for-worst-month-since-2008-as-iran-war-drags-on.html">conflict: CNBC&#x27;s headline says worst since 2008 ([CNBC</a> <span class="host">cnbc.com</span></li>
+<li><a href="https://www.benzinga.com/markets/commodities/26/03/51571560/trump-iran-war-gold-worst-month-2008-double-digit-selloff-history-forward-return">Benzinga</a> <span class="host">benzinga.com</span></li>
+<li><a href="https://www.bullionvault.com/gold-news/gold-price-news/gold-central-banks-etfs-033120261">BullionVault</a> <span class="host">bullionvault.com</span></li>
+<li><a href="https://www.tradingsuite.io/analysis/gold-2026-record-crash-rebound/">TradingSuite</a> <span class="host">tradingsuite.io</span></li>
+<li><a href="https://bulliontradingllc.com/blog/gold-and-silver-price-crash-january-2026/">conflict: one source has $3,973.79 on 24 Jun ([Bullion Trading LLC</a> <span class="host">bulliontradingllc.com</span></li>
+<li><a href="https://univest.in/blogs/gold-and-silver-crash-2026-causes-mcx-price-fall-investor-guide">Univest</a> <span class="host">univest.in</span></li>
+<li><a href="https://www.cnbc.com/2026/09/16/gold-gains-with-fed-rate-decision-in-spotlight.html">CNBC</a> <span class="host">cnbc.com</span></li>
+<li><a href="https://www.kitco.com/news/article/2026-09-16/gold-price-drops-4310oz-fed-votes-12-0-favor-25-bps-rate-hike-16-18">Kitco</a> <span class="host">kitco.com</span></li>
+<li><a href="https://www.gold.org/goldhub/research/gold-market-commentary-october-2026">WGC</a> <span class="host">gold.org</span></li>
+<li><a href="https://www.kitco.com/news/article/2026-10-14/gold-falls-below-4100-silver-plunges-6-hot-cpi-boosts-fed-hike-bets-kitco">Kitco</a> <span class="host">kitco.com</span></li>
+<li><a href="https://www.usagold.com/daily-precious-metals-market-report-october-30-2026/">USAGold</a> <span class="host">usagold.com</span></li>
+<li><a href="https://www.usagold.com/daily-precious-metals-market-report-november-5-2026/">USAGOLD</a> <span class="host">usagold.com</span></li>
+<li><a href="https://www.brecorder.com/news/40450155/gold-slides-toward-worst-week-in-eight-months">Business Recorder</a> <span class="host">brecorder.com</span></li>
+<li><a href="https://hdfcsky.com/news/gold-crashes-9percent-to-3525-silver-plunges-17percent-as-fed-hike-odds-hit-95percent">HDFC Sky</a> <span class="host">hdfcsky.com</span></li>
+<li><a href="https://investinglive.com/commodities/gold-sinks-9-in-a-week-as-margin-calls-and-fed-hike-bets-override-its-haven-role/">investinglive</a> <span class="host">investinglive.com</span></li>
+<li><a href="https://www.kitco.com/news/article/2026-11-23/gold-silver-prices-see-sharp-rebounds-ai-shares-rally-renewed-fed">Kitco</a> <span class="host">kitco.com</span></li>
+<li><a href="https://mining.com/web/gold-price-rises-as-bargain-hunters-step-in-after-steep-weekly-drop">Reuters via MINING.COM</a> <span class="host">mining.com</span></li>
+<li><a href="https://www.bullionvault.com/gold-news/gold-price-news/gold-silver-fed-mistake-112420261">BullionVault</a> <span class="host">bullionvault.com</span></li>
+<li><a href="https://www.usagold.com/daily-precious-metals-market-report-november-24-2026/">USAGOLD</a> <span class="host">usagold.com</span></li>
+<li><a href="https://www.ebc.com/forex/gold-vs-silver-2026-drawdown-comparison">EBC</a> <span class="host">ebc.com</span></li>
+<li><a href="https://www.usagold.com/daily-precious-metals-market-report-november-20-2026/">USAGOLD</a> <span class="host">usagold.com</span></li>
+<li><a href="https://silverseek.com/article/gold-and-silver-shined-2024">SilverSeek</a> <span class="host">silverseek.com</span></li>
+<li><a href="https://fortune.com/article/current-price-of-gold-11-24-202/">Fortune</a> <span class="host">fortune.com</span></li>
+<li><a href="https://fred.stlouisfed.org/graph/?g=21bb9">FRED</a> <span class="host">fred.stlouisfed.org</span></li>
+<li><a href="https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html">CNBC</a> <span class="host">cnbc.com</span></li>
+<li><a href="https://amgreatness.com/2026/11/21/ai-sell-off-drags-dow-sp-500-into-correction-as-nasdaqs-gains-for-the-year-vanish/">American Greatness</a> <span class="host">amgreatness.com</span></li>
+<li><a href="https://www.fool.com/investing/2026/11/20/bitcoin-fell-more-than-20-in-november-history-says-this-happens-next/">Motley Fool</a> <span class="host">fool.com</span></li>
+<li><a href="https://fred.stlouisfed.org/series/DGS10">FRED</a> <span class="host">fred.stlouisfed.org</span></li>
+<li><a href="https://www.investing.com/indices/usdollar-historical-data">Investing.com</a> <span class="host">investing.com</span></li>
+<li><a href="https://hdfcsky.com/news/market-close-report-today-november-20-2026-nifty-sensex-scale-nine-month-highs-as-investors-dump-global-ai-for-india">HDFC Sky</a> <span class="host">hdfcsky.com</span></li>
+<li><a href="https://www.tradingview.com/symbols/NSE-NIFTY/">TradingView</a> <span class="host">tradingview.com</span></li>
+<li><a href="https://www.fxempire.com/forecasts/article/silver-leads-gold-to-new-2026-lows-what-the-ratio-says-1644934">FXEmpire</a> <span class="host">fxempire.com</span></li>
+<li><a href="https://www.businesstoday.in/personal-finance/story/gold-silver-ratio-climbs-to-85-7-is-silver-now-relatively-cheaper-for-long-term-investors-568961-2026-11-23">BusinessToday/Choice Broking</a> <span class="host">businesstoday.in</span></li>
+<li><a href="https://www.silverbullion.com.sg/GoldSilverRatio">SilverBullion SG</a> <span class="host">silverbullion.com.sg</span></li>
+<li><a href="https://www.actionforex.com/action-insight/market-overview/661763-silver-plunges-15-two-pressures-that-could-keep-it-underperforming-gold/">ActionForex</a> <span class="host">actionforex.com</span></li>
+<li><a href="https://finviz.com/news/293188/trumps-fed-choice-kevin-warsh-sparks-dollar-surge-metals-crash">Finviz</a> <span class="host">finviz.com</span></li>
+<li><a href="https://www.advantagegold.com/blog/kevin-warsh-fed-chair-confirmed-gold/">Advantage Gold</a> <span class="host">advantagegold.com</span></li>
+<li><a href="https://uk.finance.yahoo.com/news/us-federal-kicks-off-first-141534974.html">Yahoo/AFP</a> <span class="host">uk.finance.yahoo.com</span></li>
+<li><a href="https://www.cnbc.com/2026/10/28/fed-meeting-today-live-updates.html">CNBC</a> <span class="host">cnbc.com</span></li>
+<li><a href="https://www.bls.gov/news.release/archives/cpi_11102026.htm">BLS</a> <span class="host">bls.gov</span></li>
+<li><a href="https://www.kiplinger.com/investing/economy/october-2026-cpi-report-what-to-expect">Kiplinger</a> <span class="host">kiplinger.com</span></li>
+<li><a href="https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html">CNBC</a> <span class="host">cnbc.com</span></li>
+<li><a href="https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html">CNBC</a> <span class="host">cnbc.com</span></li>
+<li><a href="https://www.jpmorgan.com/insights/global-research/economy/fed-rate-cuts">JPMorgan</a> <span class="host">jpmorgan.com</span></li>
+<li><a href="https://www.macrotrends.net/3010/10-year-tips-yield">Macrotrends</a> <span class="host">macrotrends.net</span></li>
+<li><a href="https://tipswatch.com/2026/11/19/10-year-tips-auction-gets-real-yield-of-2-903-highest-in-24-years/">TIPSWatch</a> <span class="host">tipswatch.com</span></li>
+<li><a href="https://www.thestreet.com/investing/jpmorgan-tweaks-gold-price-target-as-fed-risks-return">TheStreet</a> <span class="host">thestreet.com</span></li>
+<li><a href="https://finance.yahoo.com/markets/commodities/articles/goldman-lowers-end-gold-price-081423381.html">Yahoo Finance</a> <span class="host">finance.yahoo.com</span></li>
+<li><a href="https://www.bloomberg.com/news/articles/2026-01-28/cme-raises-silver-margins-as-prices-smash-records-in-wild-rally">Bloomberg</a> <span class="host">bloomberg.com</span></li>
+<li><a href="https://www.jmfinancialservices.in/market-news-and-insights/1669898">JM Financial</a> <span class="host">jmfinancialservices.in</span></li>
+<li><a href="https://www.businesstoday.in/markets/stocks/story/mcx-shares-additional-margin-on-gold-silver-futures-withdrawn-what-icici-sec-says-516865-2026-02-19">Business Today</a> <span class="host">businesstoday.in</span></li>
+<li><a href="https://businessquant.com/economic-data/ustips10y">Businessquant</a> <span class="host">businessquant.com</span></li>
+<li><a href="https://www.bullionvault.com/gold-news/gold-price-news/gold-silver-crash-rally-112320261">BullionVault</a> <span class="host">bullionvault.com</span></li>
+<li><a href="https://invezz.com/sg/news/2026/11/24/gold-prices-fall-as-cme-raises-margins-by-20percent-is-another-crash-coming/">Invezz</a> <span class="host">invezz.com</span></li>
+<li><a href="https://businessquant.com/economic-data/cotgoldmm">Businessquant</a> <span class="host">businessquant.com</span></li>
+<li><a href="https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/11">WGC</a> <span class="host">gold.org</span></li>
+<li><a href="https://www.forbes.com/sites/conormurray/2026/04/08/gold-and-silver-hit-3-week-highs-after-us-iran-ceasefire-agreement/">Forbes</a> <span class="host">forbes.com</span></li>
+<li><a href="https://tradingeconomics.com/commodity/gold/news/540173">Trading Economics</a> <span class="host">tradingeconomics.com</span></li>
+<li><a href="https://moderndiplomacy.eu/2026/11/22/gold-sell-off-2026-fed-rate-hikes-iran-war-central-banks/">Modern Diplomacy</a> <span class="host">moderndiplomacy.eu</span></li>
+<li><a href="https://www.bullionvault.com/gold-news/market-fundamentals/central-bank-gold-040920262">BullionVault</a> <span class="host">bullionvault.com</span></li>
+<li><a href="https://www.kucoin.com/news/insight/BTC/6af9bfcc40903b0007ae295f">KuCoin</a> <span class="host">kucoin.com</span></li>
+<li><a href="https://www.cnbc.com/2026/11/18/gold-slides-to-over-one-year-low-on-firm-dollar-us-rate-outlook.html">CNBC</a> <span class="host">cnbc.com</span></li>
+<li><a href="https://www.fxstreet.com/news/gold-slides-despite-weaker-us-dollar-as-fed-hike-bets-dominate-202611241748">FXStreet</a> <span class="host">fxstreet.com</span></li>
+<li><a href="https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q3-2026">WGC</a> <span class="host">gold.org</span></li>
+<li><a href="https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q1-2026/jewellery">WGC</a> <span class="host">gold.org</span></li>
+<li><a href="https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q3-2026/central-banks">WGC</a> <span class="host">gold.org</span></li>
+<li><a href="https://www.chinadailyhk.com/article/642391">China Daily HK</a> <span class="host">chinadailyhk.com</span></li>
+<li><a href="https://www.business-standard.com/economy/news/rbi-denies-reports-of-selling-12-bn-worth-of-gold-reserves-to-rescue-rupee-126060300621_1.html">Business Standard</a> <span class="host">business-standard.com</span></li>
+<li><a href="https://www.theweek.in/news/india/2026/11/21/pm-modi-advice-gold-price-crash.html">The Week</a> <span class="host">theweek.in</span></li>
+<li><a href="https://aninews.in/news/national/politics/indians-influenced-global-gold-prices-union-minister-piyush-goyal-hails-pm-modis-appeal-to-reduce-gold-purchases20261122151843">ANI</a> <span class="host">aninews.in</span></li>
+<li><a href="https://www.inkl.com/news/indias-gold-imports-plunge-62-57-to-5-51-billion-in-october-as-prices-fall-below-4-000-oz">ANI via inkl</a> <span class="host">inkl.com</span></li>
+<li><a href="https://discoveryalert.com/analysis/gold-silver-sell-off-evidence-november-2026/">Discovery Alert</a> <span class="host">discoveryalert.com</span></li>
+<li><a href="https://finance.yahoo.com/markets/commodities/articles/gold-rebounds-traders-pare-bets-002803539.html">Yahoo Finance</a> <span class="host">finance.yahoo.com</span></li>
+<li><a href="https://newsd.in/gold-market-outlook-wgc-sees-possible-bottom-after-sharp-2026-price-correction/">newsd.in</a> <span class="host">newsd.in</span></li>
+<li><a href="https://thestreet.com/investing/ole-hansen-gold-sell-off">TheStreet</a> <span class="host">thestreet.com</span></li>
+<li><a href="https://markets.financialcontent.com/stocks/article/marketminute-2025-10-10-silvers-historic-squeeze-deepens-london-market-in-chaos-as-prices-soar-past-50">FinancialContent</a> <span class="host">markets.financialcontent.com</span></li>
+<li><a href="https://www.kitco.com/opinion/2026-04-23/londons-silver-running-out-room">Kitco</a> <span class="host">kitco.com</span></li>
+<li><a href="https://www.business-standard.com/amp/markets/commodities/sold-out-in-india-panic-in-london-what-triggered-the-silver-market-chaos-125101900064_1.html">Business Standard</a> <span class="host">business-standard.com</span></li>
+<li><a href="https://www.kitco.com/news/article/2026-10-29/silver-could-see-further-losses-against-gold-physical-market-weakens-metals">Kitco</a> <span class="host">kitco.com</span></li>
+<li><a href="https://www.federalregister.gov/documents/2025/11/07/2025-19813/final-2025-list-of-critical-minerals">Federal Register</a> <span class="host">federalregister.gov</span></li>
+<li><a href="https://think.ing.com/articles/trump-puts-silver-tariffs-on-hold">ING</a> <span class="host">think.ing.com</span></li>
+<li><a href="https://www.kitco.com/news/article/2026-01-15/silver-price-falling-trump-will-not-impose-critical-minerals-tariffs-now">Kitco</a> <span class="host">kitco.com</span></li>
+<li><a href="https://www.cruxinvestor.com/posts/section-232-tariff-deadline-a-600-000-tonne-copper-deficit-push-capital-toward-deliverable-projects">Crux Investor</a> <span class="host">cruxinvestor.com</span></li>
+<li><a href="https://www.kitco.com/news/article/2026-04-15/silver-market-faces-another-deficit-2026-volatility-and-investment-demand">Kitco</a> <span class="host">kitco.com</span></li>
+<li><a href="https://silverinstitute.org/silver-market-set-for-sixth-consecutive-annual-deficit-in-2026/">Silver Institute</a> <span class="host">silverinstitute.org</span></li>
+<li><a href="https://www.indexbox.io/blog/silver-market-faces-sixth-consecutive-deficit-despite-solar-industry-cutting-usage/">IndexBox</a> <span class="host">indexbox.io</span></li>
+<li><a href="https://www.northernminer.com/news/solar-thrifting-not-enough-to-curb-demand/1003891836/">Northern Miner</a> <span class="host">northernminer.com</span></li>
+<li><a href="https://finbold.com/banking-giant-sets-silver-price-for-2027/">Finbold</a> <span class="host">finbold.com</span></li>
+<li><a href="https://goldsilver.com/industry-news/article/what-are-margin-requirements-why-cmes-hike-triggered-a-silver-crash/">GoldSilver.com</a> <span class="host">goldsilver.com</span></li>
+<li><a href="https://businessquant.com/economic-data/cotsilvermm">Business Quant</a> <span class="host">businessquant.com</span></li>
+<li><a href="https://www.kitco.com/opinion/2025-11-05/silver-high-where-was-it-1980-how-did-it-develop-2011-and-bear-market-looming">Kitco</a> <span class="host">kitco.com</span></li>
+<li><a href="https://peermetals.com/blog/silver-crash-history">PeerMetals</a> <span class="host">peermetals.com</span></li>
+<li><a href="https://learn.apmex.com/learning-guide/history/silver-thursday-the-hunt-brothers-scheme/">APMEX</a> <span class="host">learn.apmex.com</span></li>
+<li><a href="https://www.tribuneindia.com/news/business/indias-silver-imports-plummet-87-as-supply-is-hampered-by-import-restrictions/">Tribune</a> <span class="host">tribuneindia.com</span></li>
+<li><a href="https://www.fxstreet.com/analysis/why-indias-silver-imports-fell-91-in-a-month-202608111524">conflict: another count gives 46.8t against 534.3t ([FXStreet</a> <span class="host">fxstreet.com</span></li>
+<li><a href="https://www.kitco.com/news/off-the-wire/2026-07-08/india-silver-import-curbs-create-shortages-push-premiums-six-month">Kitco/Reuters</a> <span class="host">kitco.com</span></li>
+<li><a href="https://techyorker.com/why-indian-silver-etfs-fell-up-to-4-after-the-6500-ton-import-approval-on-october-23-2026/">Techyorker</a> <span class="host">techyorker.com</span></li>
+<li><a href="https://theopenpress.in/article/gold-silver-price-crash-silver-271-lakh-gold-72000-fall">The Open Press</a> <span class="host">theopenpress.in</span></li>
+<li><a href="https://www.tradingview.com/news/moodys:a1cd83def5cea:0-why-silver-rates-crashed-from-record-high-of-rs-4-lakh-per-kg-price-to-below-rs-1-75-lakh-experts-explain-3-key-reasons/">TradingView/Mint</a> <span class="host">tradingview.com</span></li>
+<li><a href="https://www.zeebiz.com/markets/commodities/news-silver-prices-crash-over-60-from-january-peak-is-more-downside-ahead-experts-weigh-in-405723">Zee Business</a> <span class="host">zeebiz.com</span></li>
+<li><a href="https://www.freepressjournal.in/business/silver-surges-past-4-lakh-per-kg-gold-hits-record-180-lakh-per-10g-on-mcx-amid-global-rally">Free Press Journal</a> <span class="host">freepressjournal.in</span></li>
+<li><a href="https://apnlive.com/india-news/silver-crosses-4-lakh-gold-record-high-mcx/">APN Live</a> <span class="host">apnlive.com</span></li>
+<li><a href="https://www.multibagg.ai/market-pulse/articles/silver-price-crash-mcx-2026-cml1yrjbalygbr10j6rijjf44">Multibagg</a> <span class="host">multibagg.ai</span></li>
+<li><a href="https://english.tupaki.com/latest-news/gold-silver-mcx-crash-january-30-2026-30000-gold-80000-silver-drop-1470817">conflict: &quot;near ₹1,84,000&quot; per [Tupaki</a> <span class="host">english.tupaki.com</span></li>
+<li><a href="https://www.freepressjournal.in/business/gold-falls-449-and-silver-slides-66-on-mcx-strong-dollar-and-high-us-yields-hit-bullion">FPJ</a> <span class="host">freepressjournal.in</span></li>
+<li><a href="https://theopenpress.in/article/today-gold-silver-price-fall-november-21-2026-mcx-market">conflict: ₹1,22,561 ([The Open Press</a> <span class="host">theopenpress.in</span></li>
+<li><a href="https://www.goodreturns.in/news/gold-rates-silver-rates-today-23-11-2026-live-updates-mcx-gold-silver-price-24k-22k-18k-gold-prices-1548905.html">Goodreturns</a> <span class="host">goodreturns.in</span></li>
+<li><a href="https://www.5paisa.com/commodity-trading/mcx-gold-price">5paisa</a> <span class="host">5paisa.com</span></li>
+<li><a href="https://theopenpress.in/article/gold-silver-price-crash-today-november-24-2026-mcx">The Open Press</a> <span class="host">theopenpress.in</span></li>
+<li><a href="https://www.eternz.com/blog/dhanteras-gold-silver-price-trends-2022-2026/">Eternz</a> <span class="host">eternz.com</span></li>
+<li><a href="https://www.mapmyrisk.com/research/gold-prices-2026">Map My Risk</a> <span class="host">mapmyrisk.com</span></li>
+<li><a href="https://theopenpress.in/article/gold-silver-price-today-21-november-2026-india-24k-22k">The Open Press</a> <span class="host">theopenpress.in</span></li>
+<li><a href="https://instantgoldrate.in/">InstantGoldRate</a> <span class="host">instantgoldrate.in</span></li>
+<li><a href="https://www.aljazeera.com/economy/2026/1/29/gold-surges-past-5500-amid-iran-tensions-weakening-us-dollar">Al Jazeera</a> <span class="host">aljazeera.com</span></li>
+<li><a href="https://theshillongtimes.com/2026/11/21/rupee-closes-at-92-62-against-us-dollar/">Shillong Times</a> <span class="host">theshillongtimes.com</span></li>
+<li><a href="https://www.ibja.co/Upload/IBJA_Bullion%20Daily%20Report%20-%2001-01-2026.pdf">IBJA</a> <span class="host">ibja.co</span></li>
+<li><a href="https://www.newsonair.gov.in/gold-prices-rise-silver-slips-in-indian-bullion-market">News On AIR</a> <span class="host">newsonair.gov.in</span></li>
+<li><a href="https://english.gujaratsamachar.com/news/business/gold-silver-bounce-back-mcx-gold-jumps-rs-2726-to-rs-124-lakh-silver-up-rs-3273-after-a-brutal-week-51824007051">Gujarat Samachar</a> <span class="host">english.gujaratsamachar.com</span></li>
+<li><a href="https://www.cnbc.com/2026/05/13/india-hikes-bullion-import-duties-to-arrest-rupee-slide.html">CNBC</a> <span class="host">cnbc.com</span></li>
+<li><a href="https://taxguru.in/custom-duty/customs-duty-gold-silver-raised-15-percent-effective-13-may-2026.html">TaxGuru</a> <span class="host">taxguru.in</span></li>
+<li><a href="https://www.fxstreet.com/news/modi-to-india-dont-buy-gold-for-a-year-202605121251">FXStreet</a> <span class="host">fxstreet.com</span></li>
+<li><a href="https://www.icicidirect.com/research/equity/finace/gold-and-silver-import-duty-raised-from-6-to-15-what-it-means-for-gold-and-silver-prices-and-jewellery-stocks">ICICI Direct</a> <span class="host">icicidirect.com</span></li>
+<li><a href="https://www.theweek.in/news/biz-tech/2026/05/13/india-gold-import-duty-hike.html">The Week</a> <span class="host">theweek.in</span></li>
+<li><a href="https://www.business-standard.com/amp/finance/news/rupee-enters-2026-on-back-foot-after-worst-annual-drop-in-3-years-125123100230_1.html">Business Standard</a> <span class="host">business-standard.com</span></li>
+<li><a href="https://www.businesstoday.in/latest/economy/story/gold-falls-21-globally-but-only-15-in-india-how-the-rupee-protected-investors-566568-2026-11-09">BusinessToday</a> <span class="host">businesstoday.in</span></li>
+<li><a href="https://gulfnews.com/business/banking/india-budget-2024-custom-duties-on-gold-silver-slashed-down-to-6-from-15-1.1721716047012">Gulf News</a> <span class="host">gulfnews.com</span></li>
+<li><a href="https://www.newsbytesapp.com/news/business/union-budget-2026-no-change-in-gold-silver-import-duties/story">NewsBytes</a> <span class="host">newsbytesapp.com</span></li>
+<li><a href="https://www.adityabirlacapital.com/abc-of-money/budget-2026-impact-on-jewellery-prices">conflict: Aditya Birla Capital claims a cut to 5% ([ABC</a> <span class="host">adityabirlacapital.com</span></li>
+<li><a href="https://www.kitco.com/news/off-the-wire/2026-06-09/indias-gold-tariff-hike-fuels-smuggling-revival-squeezes-banks-and-0">Kitco/Reuters</a> <span class="host">kitco.com</span></li>
+<li><a href="https://www.freepressjournal.in/business/rupee-plunges-5-in-2025-becomes-asias-worst-performing-currency">Free Press Journal</a> <span class="host">freepressjournal.in</span></li>
+<li><a href="https://theprint.in/economy/rupee-slide-tests-rbis-multiple-defenses-as-record-low-nears/3065497/">ThePrint</a> <span class="host">theprint.in</span></li>
+<li><a href="https://www.businesstoday.in/latest/economy/story/rupee-near-record-low-why-rbis-multiple-defences-are-losing-effectiveness-560381-2026-10-08">Business Today</a> <span class="host">businesstoday.in</span></li>
+<li><a href="https://finshots.in/archive/has-rbi-stabilised-rupee/">Finshots</a> <span class="host">finshots.in</span></li>
+<li><a href="https://www.business-standard.com/amp/markets/commodities/india-china-flip-to-gold-premiums-as-prices-retreat-from-record-highs-126010200403_1.html">Business Standard/Reuters</a> <span class="host">business-standard.com</span></li>
+<li><a href="https://www.kitco.com/news/off-the-wire/2026-05-13/gold-discounts-india-breach-200ounce-record-amid-profit-taking">Kitco/Reuters</a> <span class="host">kitco.com</span></li>
+<li><a href="https://www.gold.org/goldhub/gold-focus/2026/11/india-gold-market-update-gold-demand-gets-festive-boost">WGC</a> <span class="host">gold.org</span></li>
+<li><a href="https://lapaasvoice.com/india-gold-imports-fall-40-to-24-78-billion-in-april-october-2026">Lapaas Voice</a> <span class="host">lapaasvoice.com</span></li>
+<li><a href="https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-india-focus-q2-2026">WGC</a> <span class="host">gold.org</span></li>
+<li><a href="https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-india-focus-q3-2026">WGC</a> <span class="host">gold.org</span></li>
+<li><a href="https://gjepc.org/solitaire/indias-gold-demand-falls-29-in-q3-as-high-prices-restrain-buying/">GJEPC</a> <span class="host">gjepc.org</span></li>
+<li><a href="https://newstodaynet.com/2026/11/07/dhanteras-gold-sales-hit-rs-60000-crore/">News Today</a> <span class="host">newstodaynet.com</span></li>
+<li><a href="https://english.punjabkesari.com/business/gold-silver-price-correction-spurs-jewellery-demand-ahead-of-wedding-season">Punjab Kesari/IANS</a> <span class="host">english.punjabkesari.com</span></li>
+<li><a href="https://www.etvbharat.com/en/business/gold-silver-prices-cool-after-record-highs-jewellery-sales-jump-during-dhanteras-enn25102101017">ETV Bharat</a> <span class="host">etvbharat.com</span></li>
+<li><a href="https://indiafintech.substack.com/p/how-india-lends-q2-fy27-the-monthly">India Fintech Substack</a> <span class="host">indiafintech.substack.com</span></li>
+<li><a href="https://www.angelone.in/news/personal-finance/sgb-2020-21-series-viii-delivers-163-29-return-as-rbi-opens-premature-redemption-on-november-18-2026">Angel One</a> <span class="host">angelone.in</span></li>
+<li><a href="https://www.venturasecurities.com/news/mutual-funds/amfi-data-2026-gold-rush-moment-as-gold-etf-inflows-surpass-equity-mutual-fund-inflows-in-january-for-the-first-time/">Ventura Securities</a> <span class="host">venturasecurities.com</span></li>
+<li><a href="https://www.businesstoday.in/bt-tv/market-today/video/amfi-data-may-2026-record-gold-etf-outflows-check-where-is-investors-money-going-536023-2026-06-11">Business Today</a> <span class="host">businesstoday.in</span></li>
+<li><a href="https://www.businesstoday.in/personal-finance/story/gold-etf-inflows-decline-22-to-rs3470-crore-in-october-are-investors-turning-cautious-on-gold-566904-2026-11-11">Business Today</a> <span class="host">businesstoday.in</span></li>
+<li><a href="https://www.5paisa.com/blog/gold-etf-inflows-cross-rs-49000-crore-first-10-months-2026">5paisa</a> <span class="host">5paisa.com</span></li>
+<li><a href="https://www.amfiindia.com/uploads/AMFI_Monthly_Note_October2026_cd03bc1103.pdf">AMFI</a> <span class="host">amfiindia.com</span></li>
+<li><a href="https://upstox.com/news/personal-finance/mutual-funds/amfi-october-2026-data-8-key-takeaways-on-equity-mf-inflows-debt-funds-gold-and-silver-et-fs/article-203285/">Upstox</a> <span class="host">upstox.com</span></li>
+<li><a href="https://www.indmoney.com/blog/mutual-funds/gold-etf-inflows-increases-why-are-investors-rushing-to-buy">Indmoney</a> <span class="host">indmoney.com</span></li>
+<li><a href="https://upstox.com/news/personal-finance/mutual-funds/gold-fund-si-ps-and-st-ps-suspended-what-icici-prudential-hdfc-tata-invesco-mf-and-others-said/article-202078/">Upstox</a> <span class="host">upstox.com</span></li>
+<li><a href="https://www.moneylife.in/article/mutual-funds-halt-gold-etf-and-fof-inflows-ahead-of-festive-season-as-rupee-stays-under-pressure/81972.html">Moneylife</a> <span class="host">moneylife.in</span></li>
+<li><a href="https://www.valueresearchonline.com/learn/savings/why-gold-prices-falling-india-four-factors-november-2026/">Value Research</a> <span class="host">valueresearchonline.com</span></li>
+<li><a href="https://www.business-standard.com/finance/personal-finance/paying-too-much-silver-etfs-look-shiny-but-mind-the-5-12-premium-risk-125101300184_1.html">Business Standard</a> <span class="host">business-standard.com</span></li>
+<li><a href="https://www.business-standard.com/markets/news/kotak-mutual-fund-suspends-lumpsum-investments-in-silver-etf-fund-125101000120_1.html">Business Standard</a> <span class="host">business-standard.com</span></li>
+<li><a href="https://lapaasvoice.com/rbi-steps-up-monitoring-of-gold-loan-portfolios-as-falling-prices-push-ltv-ratios-above-100">Lapaas Voice</a> <span class="host">lapaasvoice.com</span></li>
+<li><a href="https://upstox.com/learning-center/personal-finance/rbi-gold-loan-rules-2026/article-1545/">Upstox</a> <span class="host">upstox.com</span></li>
+<li><a href="https://www.business-standard.com/amp/markets/news/gold-financiers-under-pressure-muthoot-manappuram-fall-5-here-s-why-126111800267_1.html">Business Standard</a> <span class="host">business-standard.com</span></li>
+<li><a href="https://www.finowings.com/Investment/gold-bond-scheme">Finowings</a> <span class="host">finowings.com</span></li>
+<li><a href="https://goldenpi.com/blog/bond-news/sovereign-gold-bond-scheme-discontinued-for-new-issues/">GoldenPi</a> <span class="host">goldenpi.com</span></li>
+<li><a href="https://www.angelone.in/news/personal-finance/sgb-2021-22-series-i-delivers-166-81-return-as-rbi-opens-premature-redemption-on-november-25-2026">Angel One</a> <span class="host">angelone.in</span></li>
+<li><a href="https://www.arihantplus.com/blogs/gold/gold-silver-tax-rules-after-budget-2026">ArihantPlus</a> <span class="host">arihantplus.com</span></li>
+<li><a href="https://calcguru.in/sovereign-gold-sovereign-gold-bond-holder-options-have-stopped-what-an-existing-holder-should-do/">Calcguru</a> <span class="host">calcguru.in</span></li>
+<li><a href="https://www.business-standard.com/article/markets/gold-prices-finally-fell-in-2013-113122500530_1.html">Business Standard</a> <span class="host">business-standard.com</span></li>
+<li><a href="https://panews.io/articles/01a20dff-ba71-7441-b521-0690765635d6">PANews</a> <span class="host">panews.io</span></li>
+<li><a href="https://discoveryalert.com/news/gold-silver-2027-forecast-september-2026/">Discovery Alert</a> <span class="host">discoveryalert.com</span></li>
+<li><a href="https://www.tradingview.com/news/cnbctv:8d0d667dc094b:0/">CNBC-TV18 via TradingView</a> <span class="host">tradingview.com</span></li>
+<li><a href="https://investinglive.com/commodities/gold-s-road-back-to-5-000-four-big-banks-bet-on-recovery-but-the-fed-sets-the-pace/">investinglive</a> <span class="host">investinglive.com</span></li>
+<li><a href="https://www.exchangerates.org.uk/news/47814/2026-11-19-2027-gold-price-forecast-ubs-sees-5-000-goldman-cuts-to-4-650.html">ExchangeRates.org.uk</a> <span class="host">exchangerates.org.uk</span></li>
+<li><a href="https://goldsilver.com/industry-news/article/gold-silver-outlook-2027/">GoldSilver.com</a> <span class="host">goldsilver.com</span></li>
+<li><a href="https://www.moneymetals.com/news/2026/10/09/metals-focus-forecasts-record-gold-prices-and-rallying-silver-in-2027-005277">Money Metals</a> <span class="host">moneymetals.com</span></li>
+<li><a href="https://www.kitco.com/opinion/2026-11-05/why-silver-price-case-now-rests-investors">Kitco</a> <span class="host">kitco.com</span></li>
+<li><a href="https://drawdownalerts.com/learn/gold-drawdown-history/">DrawdownAlerts</a> <span class="host">drawdownalerts.com</span></li>
+<li><a href="https://iraphysicalgold.com/gold-bear-markets-and-drawdowns-every-gold-ira-owner-should-understand/">IRA Physical Gold</a> <span class="host">iraphysicalgold.com</span></li>
+<li><a href="https://groww.in/blog/digital-gold-vs-gold-etfs">Groww</a> <span class="host">groww.in</span></li>
+<li><a href="https://www.finnovate.in/learn/blog/etf-taxation-india">Finnovate</a> <span class="host">finnovate.in</span></li>
+<li><a href="https://www.kotakneo.com/news/market-news/gold-silver-tax-rules-post-budget-2026/">Kotak Neo</a> <span class="host">kotakneo.com</span></li>
+<li><a href="https://www.indmoney.com/blog/mutual-funds/icici-pru-multi-asset-fund-equity-gold-silver-analysis">IndMoney</a> <span class="host">indmoney.com</span></li>
+<li><a href="https://blog.bluestone.com/making-charges-on-gold-2026/">BlueStone</a> <span class="host">blog.bluestone.com</span></li>
+<li><a href="https://www.unwindlogic.com/hidden-charges-in-gold-jewellery-complete-guide/">UnwindLogic</a> <span class="host">unwindlogic.com</span></li>
+<li><a href="https://jupiter.money/blog/how-to-buy-gold-jewellery/">Jupiter</a> <span class="host">jupiter.money</span></li>
+<li><a href="https://dhan.co/blog/investing/gold-coin-vs-gold-bar-vs-jewellery/">Dhan</a> <span class="host">dhan.co</span></li>
+<li><a href="https://www.newsonair.gov.in/sebi-warns-investors-against-unregulated-digital-gold-schemes">NewsOnAir</a> <span class="host">newsonair.gov.in</span></li>
+<li><a href="https://www.business-standard.com/finance/personal-finance/equity-vs-gold-vs-silver-how-investors-should-balance-portfolios-for-2026-126010200111_1.html">Business Standard</a> <span class="host">business-standard.com</span></li>
+<li><a href="https://www.businesstoday.in/personal-finance/investment/story/2026-portfolio-blueprint-where-to-invest-after-gold-and-silvers-blockbuster-2025-517931-2026-02-25">BusinessToday</a> <span class="host">businesstoday.in</span></li>
+<li><a href="https://cafemutual.com/news/industry/36629-gold-and-silver-outlook-2026">Cafemutual</a> <span class="host">cafemutual.com</span></li>
+<li><a href="https://www.businesstoday.in/personal-finance/story/gold-at-15-discount-silver-at-28-dsp-mutual-fund-explains-why-it-is-buying-precious-metals-now-568288-2026-11-19">BusinessToday</a> <span class="host">businesstoday.in</span></li>
+<li><a href="https://upstox.com/news/personal-finance/mutual-funds/why-dsp-multi-asset-omni-fo-f-is-increasing-gold-and-silver-allocation-amid-2026-price-crash/article-203792/">Upstox</a> <span class="host">upstox.com</span></li>
+<li><a href="https://www.business-standard.com/finance/personal-finance/cautious-on-gold-bullish-on-silver-in-2026-what-dsp-advises-investors-125100800161_1.html">Business Standard</a> <span class="host">business-standard.com</span></li>
+<li><a href="https://thefederal.com/category/personal-finance/how-can-investors-cash-in-on-gold-silver-price-fall-a-staggered-investment-strategy-is-key-263522">The Federal</a> <span class="host">thefederal.com</span></li>
+<li><a href="https://www.indexbox.io/blog/gold-slips-silver-falls-sharply-as-dollar-strength-and-fed-rate-expectations-weigh-ahead-of-key-inflation-data/">conflict: one source says 26 Nov ([IndexBox</a> <span class="host">indexbox.io</span></li>
+<li><a href="https://utkarsh.com/current-affairs/national/economy-news/why-gold-prices-are-falling-key-reasons-for-gold-crash-2026-and-impact-on-the-indian-economy">Utkarsh</a> <span class="host">utkarsh.com</span></li>
+<li><a href="https://pv-magazine-usa.com/2026/11/18/silver-prices-find-50-floor-as-solar-industry-seeks-to-accelerate-shift-toward-copper/">pv magazine</a> <span class="host">pv-magazine-usa.com</span></li>
+<li><a href="https://www.youtube.com/watch?v=RGM97CF4zSs">YouTube</a> <span class="host">youtube.com</span></li>
+        </ol>
+      </section>
+
+      <footer>
+        <span>Research brief for the video “Gold/Silver kyon gira”. Data as of 24 Nov 2026. Prices are spot unless marked futures, MCX or IBJA; rupee benchmarks exclude 3% GST and making charges.</span>
+        <span>Education and research only, not investment advice. Consult a SEBI-registered investment adviser before acting.</span>
+      </footer>
+    </main>
+  </div>
+</div>
+
+<div class="tip" id="tip" role="tooltip" hidden></div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* Tooltips for chart points and bars */
+  var tip = document.getElementById("tip");
+  function place(el) {
+    var r = el.getBoundingClientRect();
+    tip.hidden = false;
+    var tw = tip.offsetWidth, th = tip.offsetHeight;
+    var x = r.left + r.width / 2 - tw / 2;
+    var y = r.top - th - 8;
+    if (y < 8) y = r.bottom + 8;
+    x = Math.max(8, Math.min(x, window.innerWidth - tw - 8));
+    tip.style.left = x + "px";
+    tip.style.top = y + "px";
+  }
+  function show(e) { var el = e.currentTarget; tip.textContent = el.getAttribute("data-tip"); place(el); }
+  function hide() { tip.hidden = true; }
+  document.querySelectorAll("[data-tip]").forEach(function (el) {
+    el.addEventListener("pointerenter", show);
+    el.addEventListener("pointerleave", hide);
+    el.addEventListener("focus", show);
+    el.addEventListener("blur", hide);
+  });
+  window.addEventListener("scroll", hide, { passive: true });
+
+  /* Copy WhatsApp summary */
+  var copyBtn = document.getElementById("copy-wa");
+  var waText = document.getElementById("wa-text");
+  var status = document.getElementById("copy-status");
+  copyBtn.addEventListener("click", function () {
+    var text = waText.value;
+    function fallback() {
+      waText.focus();
+      waText.select();
+      status.textContent = "Text selected. Press Ctrl+C or ⌘C to copy.";
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        status.textContent = "Copied. Paste it into WhatsApp.";
+      }, fallback);
+    } else {
+      fallback();
+    }
+  });
+
+  /* Re-check list, saved per browser */
+  var KEY = "gskg-checks-v1";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll("#checks input[type=checkbox]"));
+  var progress = document.getElementById("check-progress");
+  function read() { try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { return {}; } }
+  function write(state) { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* storage unavailable */ } }
+  function render() {
+    var n = 0;
+    boxes.forEach(function (b) { b.closest("li").classList.toggle("done", b.checked); if (b.checked) n++; });
+    progress.textContent = n + " of " + boxes.length + " checked";
+  }
+  var saved = read();
+  boxes.forEach(function (b) {
+    b.checked = !!saved[b.id];
+    b.addEventListener("change", function () { var s = read(); s[b.id] = b.checked; write(s); render(); });
+  });
+  document.getElementById("reset-checks").addEventListener("click", function () {
+    boxes.forEach(function (b) { b.checked = false; });
+    write({});
+    render();
+  });
+  render();
+
+  /* Highlight the current section in the contents list */
+  var links = {};
+  document.querySelectorAll(".toc a").forEach(function (a) { links[a.getAttribute("href").slice(1)] = a; });
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          Object.keys(links).forEach(function (k) { links[k].classList.toggle("on", k === en.target.id); });
+        }
+      });
+    }, { rootMargin: "-20% 0px -70% 0px" });
+    document.querySelectorAll("main section[id]").forEach(function (s) { io.observe(s); });
+  }
+})();
+</script>
